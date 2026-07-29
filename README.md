@@ -122,7 +122,7 @@ Known limitations and support caveats: **[`docs/known-issues-v0.1-alpha.md`](doc
 
 Keepsake is an [Inflatable Cookie](https://github.com/inflatable-cookie)
 product from the team behind
-[Signal](https://github.com/infinite-loop-audio/signal) and Loophole. Signal
+[Signal](https://github.com/inflatable-cookie/signal) and Loophole. Signal
 supports CLAP natively, which means Keepsake works in Signal out of the box —
 your VST2 plugins appear in the plugin browser with no additional setup.
 
