@@ -118,7 +118,7 @@ intptr_t __cdecl vst2_host_callback(
         break;
     case audioMasterGetVendorString:
         if (ptr) {
-            strncpy(static_cast<char *>(ptr), "Infinite Loop Audio", 64);
+            strncpy(static_cast<char *>(ptr), "Inflatable Cookie", 64);
             static_cast<char *>(ptr)[63] = '\0';
             result = 1;
             break;

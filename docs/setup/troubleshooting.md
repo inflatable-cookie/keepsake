@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Common problems and how to fix them. If something here doesn't resolve your issue, please [open an issue on GitHub](https://github.com/infinite-loop-audio/keepsake/issues) with your platform, host, and what you tried.
+Common problems and how to fix them. If something here doesn't resolve your issue, please [open an issue on GitHub](https://github.com/inflatable-cookie/keepsake/issues) with your platform, host, and what you tried.
 
 ---
 
@@ -221,4 +221,4 @@ bridge/vst2: <message>
 bridge/vst3: <message>
 ```
 
-If you're seeing an error there that isn't covered here, please paste it in a [GitHub issue](https://github.com/infinite-loop-audio/keepsake/issues).
+If you're seeing an error there that isn't covered here, please paste it in a [GitHub issue](https://github.com/inflatable-cookie/keepsake/issues).

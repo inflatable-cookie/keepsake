@@ -1,7 +1,7 @@
 # G01.010 — Configurable Process Isolation
 
 Status: complete
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-11
 Governing refs:
   - docs/contracts/006-process-isolation-policy.md

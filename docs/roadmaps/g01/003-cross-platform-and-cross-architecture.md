@@ -1,7 +1,7 @@
 # G01.003 — Cross-Platform and Cross-Architecture Support
 
 Status: complete
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-10
 Governing refs:
   - docs/contracts/001-working-rules.md

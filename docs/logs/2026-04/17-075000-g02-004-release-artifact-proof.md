@@ -21,7 +21,7 @@ This batch did the first real publication-proof pass without cutting the tag:
 - run: `24551886351`
 - head SHA: `3b3c9cf4d172a35ccc1896d21a1b73ea3db34eda`
 - URL:
-  - `https://github.com/infinite-loop-audio/keepsake/actions/runs/24551886351`
+  - `https://github.com/inflatable-cookie/keepsake/actions/runs/24551886351`
 
 ## Artifact set
 

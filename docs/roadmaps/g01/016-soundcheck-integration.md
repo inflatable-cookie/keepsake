@@ -1,7 +1,7 @@
 # G01.016 — Soundcheck Integration
 
 Status: superseded
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-07-16
 Governing refs:
   - docs/contracts/006-process-isolation-policy.md

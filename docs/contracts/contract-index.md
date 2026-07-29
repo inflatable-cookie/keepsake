@@ -1,7 +1,7 @@
 # Contract Index
 
 Status: active
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-07-15
 
 ## Coverage Rules

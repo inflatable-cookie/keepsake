@@ -18,7 +18,7 @@ This guide walks through installing Keepsake on macOS from scratch. It covers do
 
 ## Step 1 — Download Keepsake
 
-Go to the [Keepsake releases page](https://github.com/infinite-loop-audio/keepsake/releases/tag/v0.1-alpha) and download:
+Go to the [Keepsake releases page](https://github.com/inflatable-cookie/keepsake/releases/tag/v0.1-alpha) and download:
 
 ```
 keepsake-macos-arm64-v0.1-alpha.zip

@@ -1,7 +1,7 @@
 # macOS Bridged UI Options
 
 Status: draft
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-07-16
 Vision refs: docs/vision/001-keepsake-vision.md
 Related roadmap refs:

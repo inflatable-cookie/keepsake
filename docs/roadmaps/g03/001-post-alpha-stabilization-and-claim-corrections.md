@@ -1,7 +1,7 @@
 # G03.001 — Post-Alpha Stabilization and Claim Corrections
 
 Status: active
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-07-16
 Governing refs:
   - docs/contracts/001-working-rules.md

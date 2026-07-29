@@ -1,7 +1,7 @@
 # G01.008 — VST3 and AU v2 Loaders
 
 Status: complete
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-10
 Governing refs:
   - docs/contracts/002-clap-factory-interface.md

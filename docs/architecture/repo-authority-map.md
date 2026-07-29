@@ -1,7 +1,7 @@
 # Repo Authority Map
 
 Status: active
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-07-16
 
 ## Ownership

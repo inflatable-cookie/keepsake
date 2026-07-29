@@ -39,6 +39,9 @@ If `specs/` exists, treat it as provisional planning that should promote into
 
 ## Current Posture
 
+Keepsake is an Inflatable Cookie product. The canonical repository is
+[`inflatable-cookie/keepsake`](https://github.com/inflatable-cookie/keepsake).
+
 G01 is complete. The core bridge lanes exist: config → scan → cache → factory
 → bridge → audio, plus GUI, CI, and codebase-health follow-through.
 

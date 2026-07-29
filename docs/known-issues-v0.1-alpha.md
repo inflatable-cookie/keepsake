@@ -1,7 +1,7 @@
 # Known Issues — v0.1-alpha
 
 Status: active
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-20
 
 This is the release-baseline caveat list for the first public alpha. It should
@@ -95,7 +95,7 @@ should not imply equal confidence without fresh release-window evidence.
 ### Packaging and install surface
 
 - `v0.1-alpha` is now published:
-  - `https://github.com/infinite-loop-audio/keepsake/releases/tag/v0.1-alpha`
+  - `https://github.com/inflatable-cookie/keepsake/releases/tag/v0.1-alpha`
 - macOS is the primary supported release artifact.
 - Windows and Linux assets are published as explicitly experimental attachments.
 - Signed/notarized vs unsigned macOS alpha distribution remains an open caveat,

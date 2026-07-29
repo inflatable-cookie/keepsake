@@ -553,7 +553,7 @@ void init_host(HostState &state) {
     state.host.clap_version = CLAP_VERSION;
     state.host.host_data = &state;
     state.host.name = "keepsake-mac-clap-host";
-    state.host.vendor = "Infinite Loop Audio";
+    state.host.vendor = "Inflatable Cookie";
     state.host.url = "";
     state.host.version = "1.0";
     state.host.get_extension = host_get_extension;

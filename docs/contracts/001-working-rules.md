@@ -1,10 +1,10 @@
 # 001 - Working Rules
 
 Status: active
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-10
 Depends on: docs/architecture/system-architecture.md
-Authority owners: Infinite Loop Audio
+Authority owners: Inflatable Cookie
 Affects: all execution work in this repo
 
 ## Problem

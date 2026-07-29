@@ -1,7 +1,7 @@
 # G02.002 — Release Packaging, Versioning, and Install Surface
 
 Status: complete
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-17
 Governing refs:
   - docs/contracts/001-working-rules.md

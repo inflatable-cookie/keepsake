@@ -14,6 +14,7 @@ Logs capture dated evidence and assessments.
 
 ## Recent Evidence
 
+- [`2026-07/29-214612-inflatable-cookie-ownership-migration.md`](2026-07/29-214612-inflatable-cookie-ownership-migration.md) — moved repository, product, runtime vendor, canonical links, and docs authority from Infinite Loop Audio to Inflatable Cookie while preserving dated historical evidence
 - [`2026-07/16-114200-macos-native-editor-placeholder-refocus.md`](2026-07/16-114200-macos-native-editor-placeholder-refocus.md) — removed the brittle Soundcheck companion UI stack and restored a host-independent native editor plus non-rendering placeholder/reopen contract
 - [`2026-07/15-162700-soundcheck-companion-inspection-integration.md`](2026-07/15-162700-soundcheck-companion-inspection-integration.md) — wired installed Soundcheck to the signed ScreenCaptureKit inspection host, resolved APC by Keepsake descriptor ID, and captured a clean 1920×1160 PNG
 - [`2026-07/15-123000-macos-x64-editor-hosting-research.md`](2026-07/15-123000-macos-x64-editor-hosting-research.md) — CARemote transport succeeded but rendered black; an x86_64 disposable local VST2 host rendered the editor correctly and established the Soundcheck integration direction

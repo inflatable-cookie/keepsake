@@ -1,7 +1,7 @@
 # G02.005 — macOS UI Model and Interactive Fallback Prototype
 
 Status: complete
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-16
 Governing refs:
   - docs/contracts/001-working-rules.md

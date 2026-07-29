@@ -39,8 +39,8 @@ repository.
 Keepsake is a standalone open-source CLAP plugin (C/C++) that bridges legacy
 plugins — VST2, VST3, and AU v2, including 32-bit binaries — into CLAP-capable
 hosts with process isolation. VST2 uses VeSTige clean-room headers. Published
-by Infinite Loop Audio under LGPL v2.1. Related to Signal/Loophole but
-deliberately separate — Signal ships zero legacy bridge code and does not
+as an Inflatable Cookie product under LGPL v2.1. Related to Signal/Loophole
+but deliberately separate — Signal ships zero legacy bridge code and does not
 depend on Keepsake.
 
 ## Key Boundaries

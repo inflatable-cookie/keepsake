@@ -1,7 +1,7 @@
 # 007 — macOS Native Editor and Host Placeholder
 
 Status: active
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-07-16
 Architecture refs:
   - docs/architecture/macos-bridged-ui-options.md

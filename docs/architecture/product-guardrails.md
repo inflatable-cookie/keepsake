@@ -1,7 +1,7 @@
 # Product Guardrails
 
 Status: active
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-10
 Vision refs: docs/vision/001-keepsake-vision.md
 

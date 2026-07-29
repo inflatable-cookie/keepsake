@@ -1,7 +1,7 @@
 # G01.005 — MIDI, Parameter Automation, and State
 
 Status: complete
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-10
 Governing refs:
   - docs/contracts/004-ipc-bridge-protocol.md

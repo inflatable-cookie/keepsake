@@ -1,7 +1,7 @@
 # G01.012 — Windows and Linux GUI Backends
 
 Status: complete
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-11
 Governing refs:
   - docs/architecture/system-architecture.md

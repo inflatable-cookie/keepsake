@@ -83,10 +83,10 @@ Release: v0.1-alpha
 - CI run:
   - release artifacts:
     - `24310750164`
-    - `https://github.com/infinite-loop-audio/keepsake/actions/runs/24310750164`
+    - `https://github.com/inflatable-cookie/keepsake/actions/runs/24310750164`
   - normal CI:
     - `24310748505`
-    - `https://github.com/infinite-loop-audio/keepsake/actions/runs/24310748505`
+    - `https://github.com/inflatable-cookie/keepsake/actions/runs/24310748505`
 - GitHub release URL:
   - not published
 

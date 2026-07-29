@@ -1,7 +1,7 @@
 # G02.004 — Publish v0.1-alpha
 
 Status: complete
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-17
 Governing refs:
   - docs/contracts/001-working-rules.md
@@ -39,7 +39,7 @@ Closed by:
 - release candidate commit `0521d8b`
 - published tag `v0.1-alpha`
 - published GitHub release:
-  - `https://github.com/infinite-loop-audio/keepsake/releases/tag/v0.1-alpha`
+  - `https://github.com/inflatable-cookie/keepsake/releases/tag/v0.1-alpha`
 - green release workflow:
   - `24552158082`
 - post-publication macOS packaged-artifact REAPER smoke:

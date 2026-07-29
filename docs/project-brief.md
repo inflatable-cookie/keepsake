@@ -2,7 +2,8 @@
 
 > A standalone open-source CLAP plugin that bridges legacy plugins — VST2, VST3, and AU v2, including 32-bit binaries — into CLAP-capable hosts.
 
-Published by [Infinite Loop Audio](https://github.com/infinite-loop-audio) under the GNU Lesser General Public License v2.1.
+Published by [Inflatable Cookie](https://github.com/inflatable-cookie) under
+the GNU Lesser General Public License v2.1.
 
 Current release posture:
 
@@ -39,8 +40,9 @@ The user need is real and goes beyond VST2:
 Keepsake solves this cleanly:
 
 - **Signal ships zero legacy bridge code.** It hosts CLAP. Keepsake is a CLAP plugin. Signal's relationship with each format stays at its own native hosting boundary.
-- **Keepsake is a standalone open-source project.** It is not bundled with Signal or distributed by Infinite Loop Audio as part of any commercial product.
-- **Users self-install.** The legal exposure stays with the open-source project and its format-specific lineage, not with Signal or Loophole.
+- **Keepsake is an Inflatable Cookie product and a standalone open-source project.** It is published separately under LGPL v2.1 and is not bundled with Signal.
+- **Users self-install.** The format-specific implementation and licence
+  boundaries remain contained in Keepsake, not Signal or Loophole.
 
 ---
 
@@ -69,7 +71,7 @@ Sources:
 
 LMMS and Ardour have both shipped VeSTige-based VST2 hosting for over 20 years under GPL/LGPL licences without successful enforcement action. This is the established open-source pattern that Keepsake follows.
 
-The RustAudio/vst-rs crate — the Rust community's canonical VST2 reference — was archived in March 2024 with the explicit note that it is no longer possible to acquire a license to distribute VST2 products. The Rust audio ecosystem has conceded the commercial hosting question. Keepsake is not a commercial host.
+The RustAudio/vst-rs crate — the Rust community's canonical VST2 reference — was archived in March 2024 with the explicit note that it is no longer possible to acquire a license to distribute VST2 products. The Rust audio ecosystem has conceded the commercial hosting question. Keepsake follows the separate LGPL open-source host model.
 
 ### Trademark
 
@@ -168,11 +170,11 @@ VST2 on Apple Silicon macOS requires Rosetta 2 for x86_64 VST2 binaries, or nati
 
 ## What Keepsake is not
 
-- It is not a commercial product and is not sold
+- It is not proprietary; it is distributed under LGPL v2.1
 - It is not affiliated with or endorsed by Steinberg Media Technologies
 - It is not a replacement for proper CLAP ports of legacy plugins
 - It does not bundle the Steinberg VST2 SDK or any Steinberg intellectual property
-- It is not part of the Signal or Loophole commercial distribution
+- It is not bundled with Signal or Loophole
 
 ---
 

@@ -18,7 +18,7 @@ This guide walks through installing Keepsake on Linux (x86_64), from downloading
 
 ## Step 1 — Download Keepsake
 
-Go to the [Keepsake releases page](https://github.com/infinite-loop-audio/keepsake/releases/tag/v0.1-alpha) and download:
+Go to the [Keepsake releases page](https://github.com/inflatable-cookie/keepsake/releases/tag/v0.1-alpha) and download:
 
 ```
 keepsake-linux-x64-v0.1-alpha.tar.gz

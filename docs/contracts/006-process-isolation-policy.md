@@ -1,10 +1,10 @@
 # 006 - Process Isolation Policy
 
 Status: active
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-11
 Depends on: docs/contracts/004-ipc-bridge-protocol.md
-Authority owners: Infinite Loop Audio
+Authority owners: Inflatable Cookie
 Affects: g01.010 and all subsequent milestones that touch the bridge lifecycle
 
 ## Problem

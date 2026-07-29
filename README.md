@@ -60,7 +60,7 @@ Each plugin runs in an isolated subprocess, so a crash in a legacy plugin produc
 
 ## Installation
 
-Download `v0.1-alpha` from the [releases page](https://github.com/infinite-loop-audio/keepsake/releases/tag/v0.1-alpha) and follow the setup guide for your platform:
+Download `v0.1-alpha` from the [releases page](https://github.com/inflatable-cookie/keepsake/releases/tag/v0.1-alpha) and follow the setup guide for your platform:
 
 - **[macOS setup guide](docs/setup/macos.md)** — primary validated lane
 - **[Windows setup guide](docs/setup/windows.md)** — experimental
@@ -118,11 +118,17 @@ Known limitations and support caveats: **[`docs/known-issues-v0.1-alpha.md`](doc
 
 ---
 
-## Signal / Loophole
+## Inflatable Cookie / Signal / Loophole
 
-Keepsake was created by [Infinite Loop Audio](https://github.com/infinite-loop-audio), the team behind [Signal](https://github.com/infinite-loop-audio/signal) and Loophole. Signal supports CLAP natively, which means Keepsake works in Signal out of the box — your VST2 plugins appear in the plugin browser with no additional setup.
+Keepsake is an [Inflatable Cookie](https://github.com/inflatable-cookie)
+product from the team behind
+[Signal](https://github.com/infinite-loop-audio/signal) and Loophole. Signal
+supports CLAP natively, which means Keepsake works in Signal out of the box —
+your VST2 plugins appear in the plugin browser with no additional setup.
 
-**Keepsake is a separate, standalone open-source project.** Signal does not ship VST2 support and does not include any VST2 code. Keepsake is not bundled with Signal or distributed as part of any Infinite Loop Audio commercial product. It exists as a community tool for users who need it, and is published here separately on that basis.
+**Keepsake remains a separate, standalone open-source project.** Inflatable
+Cookie publishes it under LGPL v2.1. Signal does not ship VST2 support, include
+legacy bridge code, or depend on Keepsake.
 
 If you are a developer of another CLAP host and want to offer tighter Keepsake integration (rescan triggers, legacy badges, scan path configuration), the stable plugin ID namespace is `keepsake.<format>.*` (e.g., `keepsake.vst2.*`, `keepsake.vst3.*`, `keepsake.au.*`). See [`docs/project-brief.md`](docs/project-brief.md) for the integration tier details.
 

@@ -1,7 +1,7 @@
 # G01.015 — Codebase Health
 
 Status: complete
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-11
 Auto-continuation: allowed within g01
 

@@ -1,7 +1,7 @@
 # G01.014 — Scan Robustness
 
 Status: complete
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-11
 Governing refs:
   - docs/contracts/002-clap-factory-interface.md

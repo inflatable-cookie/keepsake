@@ -15,7 +15,7 @@ static const int     TEST_NUM_INPUTS  = 2;
 static const int     TEST_NUM_OUTPUTS = 2;
 static const int     TEST_NUM_PARAMS  = 1;
 static const char   *TEST_NAME        = "Keepsake Test Plugin";
-static const char   *TEST_VENDOR      = "Infinite Loop Audio";
+static const char   *TEST_VENDOR      = "Inflatable Cookie";
 static const char   *TEST_PRODUCT     = "KeepsakeTest";
 static const int32_t TEST_VERSION     = 0x010000; // 1.0.0
 

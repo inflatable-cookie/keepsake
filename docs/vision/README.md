@@ -28,8 +28,8 @@ can prove in a fresh release window.
 - VST3 SDK (GPLv3) is permitted for VST3 hosting, in a subprocess only.
 - CLAP is the outer plugin format — MIT licensed, no VST3 licence conflicts.
 - 32-bit bridging is a first-class architectural concern.
-- Keepsake is not a commercial product and is not bundled with Signal or
-  Loophole.
+- Keepsake is an Inflatable Cookie product distributed separately under LGPL
+  v2.1; it is not bundled with Signal or Loophole.
 - Legal and trademark guardrails from `docs/project-brief.md` are permanent
   constraints, not implementation choices.
 

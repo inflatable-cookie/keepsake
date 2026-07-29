@@ -18,7 +18,7 @@ This guide walks through installing Keepsake on Windows, from downloading the re
 
 ## Step 1 — Download Keepsake
 
-Go to the [Keepsake releases page](https://github.com/infinite-loop-audio/keepsake/releases/tag/v0.1-alpha) and download:
+Go to the [Keepsake releases page](https://github.com/inflatable-cookie/keepsake/releases/tag/v0.1-alpha) and download:
 
 ```
 keepsake-windows-x64-v0.1-alpha.zip

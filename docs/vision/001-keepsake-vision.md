@@ -1,7 +1,7 @@
 # 001 - Keepsake Vision
 
 Status: active
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-12
 Vision refs: this document is the primary vision artifact
 
@@ -34,10 +34,10 @@ Keepsake solves this cleanly:
 - Signal ships zero legacy format code. It hosts CLAP. Keepsake is a CLAP
   plugin. Signal never touches VST2, and its relationship with VST3 and AU
   stays at its own native hosting boundary.
-- Keepsake is a standalone open-source project, not part of any commercial
-  distribution.
-- Users self-install. Legal exposure stays with the open-source project and its
-  format-specific lineage, not with Signal or Loophole.
+- Keepsake is an Inflatable Cookie product and a standalone open-source
+  project, distributed separately under LGPL v2.1.
+- Users self-install. Format-specific implementation and licence boundaries
+  remain contained in Keepsake, not Signal or Loophole.
 
 ## Target Operating Model
 

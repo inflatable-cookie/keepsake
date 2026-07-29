@@ -24,7 +24,7 @@ namespace {
 
 constexpr const char *kPluginId = "keepsake.host-probe";
 constexpr const char *kPluginName = "Keepsake Host Probe";
-constexpr const char *kVendor = "Infinite Loop Audio";
+constexpr const char *kVendor = "Inflatable Cookie";
 constexpr const char *kWindowClass = "KeepsakeHostProbeChild";
 constexpr double kPi = 3.14159265358979323846;
 

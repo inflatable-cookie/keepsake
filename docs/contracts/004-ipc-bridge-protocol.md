@@ -1,10 +1,10 @@
 # 004 - IPC Bridge Protocol
 
 Status: active
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-10
 Depends on: docs/architecture/system-architecture.md, docs/contracts/002-clap-factory-interface.md
-Authority owners: Infinite Loop Audio
+Authority owners: Inflatable Cookie
 Affects: g01.002 and all subsequent milestones that use the subprocess bridge
 
 ## Problem

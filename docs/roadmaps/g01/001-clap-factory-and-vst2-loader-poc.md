@@ -1,7 +1,7 @@
 # G01.001 — CLAP Factory and VeSTige Loader Proof-of-Concept
 
 Status: complete
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-10
 Governing refs:
   - docs/contracts/001-working-rules.md

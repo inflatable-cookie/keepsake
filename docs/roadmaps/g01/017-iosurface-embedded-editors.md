@@ -1,7 +1,7 @@
 # G01.017 — IOSurface Embedded Editors (macOS)
 
 Status: parked
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-04-16
 Auto-continuation: allowed within g01
 

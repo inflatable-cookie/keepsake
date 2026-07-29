@@ -1,10 +1,10 @@
 # 002 - CLAP Factory Interface
 
 Status: active
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Updated: 2026-07-12
 Depends on: docs/architecture/system-architecture.md, docs/contracts/001-working-rules.md
-Authority owners: Infinite Loop Audio
+Authority owners: Inflatable Cookie
 Affects: g01.001 and all subsequent milestones that touch the factory or descriptor shape
 
 ## Problem

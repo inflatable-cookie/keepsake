@@ -1,7 +1,7 @@
 # Backlog 001 — macOS Preview Lane Disposition
 
 Status: partially resolved
-Owner: Infinite Loop Audio
+Owner: Inflatable Cookie
 Created: 2026-04-17
 Depends on:
   - g02.005 complete
