@@ -8,6 +8,8 @@ They set the realized constraints roadmap batches must honor.
 - [`macos-bridged-ui-options.md`](macos-bridged-ui-options.md) — architecture
   decision brief for macOS bridged editor presentation after the embedded-input
   cutoff
+- [`native-vst2-host-capabilities.md`](native-vst2-host-capabilities.md) —
+  dated CLAP + VST2 host matrix and safe runtime-identity activation boundary
 - [`system-architecture.md`](system-architecture.md) — component layout and
   CLAP/VeSTige seams
 - [`system-inventory.md`](system-inventory.md) — execution-relevant surfaces

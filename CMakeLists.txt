@@ -75,6 +75,18 @@ if(BUILD_TESTING)
         ${CMAKE_CURRENT_SOURCE_DIR}/src
     )
     add_test(NAME vst2-string-buffer-overflow COMMAND vst2-string-buffer-test)
+
+    add_executable(host-capabilities-test
+        tools/host-capabilities-test.cpp
+        src/host_capabilities.cpp
+    )
+    target_include_directories(host-capabilities-test PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+    )
+    if(APPLE)
+        target_link_libraries(host-capabilities-test PRIVATE "-framework CoreFoundation")
+    endif()
+    add_test(NAME host-capabilities COMMAND host-capabilities-test)
 endif()
 
 # Create a symlink so #include "pluginterfaces/..." works
@@ -98,6 +110,7 @@ add_library(keepsake MODULE
     src/main.cpp
     src/factory.cpp
     src/factory_helpers.cpp
+    src/host_capabilities.cpp
     src/plugin_identity.cpp
     src/plugin_labels.cpp
     src/factory_scan.cpp

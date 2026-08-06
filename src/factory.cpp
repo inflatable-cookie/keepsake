@@ -1,4 +1,5 @@
 #include "factory_internal.h"
+#include "host_capabilities.h"
 #include "debug_log.h"
 
 #include <cstring>
@@ -178,6 +179,24 @@ bool keepsake_factory_init(const char *plugin_path) {
         use_cache = false; // env override bypasses cache
     } else {
         cfg = config_load();
+    }
+
+    const KeepsakeHostCapabilities host_capabilities = current_host_capabilities();
+    const KeepsakeVst2Exposure vst2_exposure = resolve_vst2_exposure(
+        host_capabilities.native_vst2,
+        cfg.expose_vst2_native,
+        cfg.expose_vst2_bridged);
+    cfg.expose_vst2_native = vst2_exposure.native;
+    cfg.expose_vst2_bridged = vst2_exposure.bridged;
+    if (host_capabilities.native_vst2 == NativeVst2HostSupport::Supported) {
+        fprintf(stderr,
+                "keepsake: host '%s' supports native VST2; native VST2 descriptors are suppressed\n",
+                host_capabilities.identity.empty() ? "unknown" : host_capabilities.identity.c_str());
+    } else if (host_capabilities.native_vst2 == NativeVst2HostSupport::Unknown) {
+        fprintf(stderr,
+                "keepsake: host capability identity='%s' native-vst2=unknown; preserving expose.vst2_native=%s\n",
+                host_capabilities.identity.empty() ? "unknown" : host_capabilities.identity.c_str(),
+                cfg.expose_vst2_native ? "true" : "false");
     }
 
     // Configure isolation policy

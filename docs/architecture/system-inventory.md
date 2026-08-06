@@ -2,7 +2,7 @@
 
 Status: active
 Owner: Inflatable Cookie
-Updated: 2026-07-16
+Updated: 2026-08-06
 Vision refs: docs/vision/001-keepsake-vision.md
 
 ## Execution-Relevant Surfaces
@@ -20,6 +20,7 @@ Vision refs: docs/vision/001-keepsake-vision.md
 | macOS host placeholder + native editor | Code surface | Implemented; validation active | Passive Cocoa child view in the host plus bridge-owned real editor window; governed by contract 007 |
 | macOS IOSurface preview path | Code surface | Implemented, diagnostic-only | Retained for operator/debug use; not part of the supported interactive alpha lane |
 | Platform config + cache files | Config surface | Implemented, docs incomplete | Runtime exists; release-grade schema docs still pending |
+| Native VST2 host capability classifier | Code + policy surface | Implemented on macOS; identity coverage incremental | Full product matrix is dated; automatic suppression is limited to exact verified process identities |
 | Build system | Tooling | Implemented | CMake + CI across macOS, Windows, Linux |
 | REAPER smoke harness | Tooling | Implemented | Guarded real-host validation lane on macOS |
 | Alpha known-issues surface | Release surface | New in g02 | Governs first public alpha caveats |

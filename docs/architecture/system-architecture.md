@@ -65,6 +65,7 @@ keepsake-bridge-32 (helper binary, 32-bit — where platform supports it)
 | IPC / subprocess model | Pipe protocol + shared memory | Governed by `docs/contracts/004-ipc-bridge-protocol.md`; current implementation also multiplexes instances inside shared bridges |
 | Bridge helper binaries | `keepsake-bridge`, `keepsake-bridge-x86_64`, future `keepsake-bridge-32` | Native helper plus cross-arch helper where needed; 32-bit still needs release-grade proof before claiming support |
 | Scan path config | config + cache files per platform | Runtime exists; user-facing schema/docs still need alpha release hardening |
+| Host capability policy | product matrix + exact runtime identity | Suppresses redundant same-architecture VST2 descriptors only in positively identified CLAP hosts that already support VST2; governed by contract 008 |
 | macOS editor posture | Passive host placeholder plus bridge-owned native editor window | Every normal CLAP host gets the same Cocoa parent view. Real plugin rendering and input remain in the native bridge window. Keepsake has no companion or screenshot API. |
 
 ## Platform Notes

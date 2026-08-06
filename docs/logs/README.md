@@ -14,6 +14,7 @@ Logs capture dated evidence and assessments.
 
 ## Recent Evidence
 
+- [`2026-08/06-150000-native-vst2-host-capability-matrix.md`](2026-08/06-150000-native-vst2-host-capability-matrix.md) — classified the current public CLAP host set against native VST2 support and activated exact macOS process identities for Studio Pro, REAPER, and Bitwig
 - [`2026-07/29-214612-inflatable-cookie-ownership-migration.md`](2026-07/29-214612-inflatable-cookie-ownership-migration.md) — moved repository, product, runtime vendor, canonical links, and docs authority from Infinite Loop Audio to Inflatable Cookie while preserving dated historical evidence
 - [`2026-07/16-114200-macos-native-editor-placeholder-refocus.md`](2026-07/16-114200-macos-native-editor-placeholder-refocus.md) — removed the brittle Soundcheck companion UI stack and restored a host-independent native editor plus non-rendering placeholder/reopen contract
 - [`2026-07/15-162700-soundcheck-companion-inspection-integration.md`](2026-07/15-162700-soundcheck-companion-inspection-integration.md) — wired installed Soundcheck to the signed ScreenCaptureKit inspection host, resolved APC by Keepsake descriptor ID, and captured a clean 1920×1160 PNG

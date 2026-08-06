@@ -2,7 +2,7 @@
 
 Status: active
 Owner: Inflatable Cookie
-Updated: 2026-07-15
+Updated: 2026-08-06
 
 ## Coverage Rules
 
@@ -21,6 +21,7 @@ Updated: 2026-07-15
 | `004-ipc-bridge-protocol.md` | Subprocess lifecycle, pipe protocol, shared memory layout, crash handling | keepsake repo | g01.002+ | active |
 | `006-process-isolation-policy.md` | Shared/per-binary/per-instance isolation, multi-instance bridge, config overrides | keepsake repo | g01.010+ | active |
 | `007-macos-native-editor-and-host-placeholder.md` | Passive host-owned Cocoa view plus bridge-owned native legacy editor | keepsake repo | g03.001 | active |
+| `008-native-vst2-host-capability-policy.md` | Host-aware same-architecture VST2 descriptor suppression | keepsake repo | post-alpha stabilization | active |
 
 ## Missing or Pending Contracts
 
