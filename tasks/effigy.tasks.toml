@@ -44,6 +44,8 @@
   { task = "qa:northstar:headings" },
   { task = "qa:northstar:agent-defaults" },
 ]
+# Cheap orientation for `effigy doctor`. Full board is `effigy qa`.
+# Never alias health to qa.
+health = [{ task = "qa:docs:agent-defaults" }]
 qa = [{ task = "qa:docs" }, { task = "qa:northstar" }]
-health = [{ task = "qa" }]
 "release:candidate:alpha" = "./tools/release-candidate.sh --version v0.1-alpha"
