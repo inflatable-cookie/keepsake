@@ -8,7 +8,7 @@ Keepsake bridges the gap between legacy plugin formats — VST2, VST3, AU v2, in
 
 ## Current Status
 
-Keepsake is in an active alpha-release hardening phase.
+Keepsake is in post-alpha stabilization on the published `v0.1-alpha` artifact.
 
 The strongest current evidence lane is:
 

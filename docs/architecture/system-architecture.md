@@ -2,7 +2,7 @@
 
 Status: active
 Owner: Inflatable Cookie
-Updated: 2026-07-16
+Updated: 2026-08-17
 Vision refs: docs/vision/001-keepsake-vision.md
 
 ## Overview
@@ -86,5 +86,5 @@ keepsake-bridge-32 (helper binary, 32-bit — where platform supports it)
 
 ## Next Task
 
-Use g02.002 to turn this now-aligned architecture posture into release-shaped
-artifacts and install guidance without broadening the claim set.
+Keep architecture aligned with contract 008 host identity coverage; no new
+host-specific runtime seams until `v0.2.0` is specced.

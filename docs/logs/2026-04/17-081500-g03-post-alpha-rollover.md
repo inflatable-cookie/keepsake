@@ -1,5 +1,8 @@
 # G03 — Post-Alpha Stabilization Rollover
 
+> **Superseded 2026-08-17:** `g03` absorbed back into `g02` as milestone
+> `006`. See `docs/logs/2026-08/17-153800-g03-absorbed-into-g02.md`.
+
 Date: 2026-04-17
 Status: updated
 

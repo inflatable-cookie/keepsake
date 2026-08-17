@@ -5,19 +5,18 @@ contracts.
 
 ## Active Generation
 
-- `g03` — post-alpha stabilization: release-window bug intake, claim
-  corrections, and install/runtime hardening on top of the published alpha
+- `g02` — alpha through `v0.1-alpha`; `v0.2.0` planned as `007+`
 
 ## Generation Index
 
 - [`generation-index.md`](generation-index.md)
+- Long-horizon runway: [`../vision/002-strategic-horizons.md`](../vision/002-strategic-horizons.md)
 
 ## Layout
 
 - `gNN/batch-cards/` optional per-generation execution cards
 - `g01/` — first generation milestones
-- `g02/` — alpha release generation
-- `g03/` — post-alpha stabilization generation
+- `g02/` — alpha release, stabilization, and `v0.2.0` stream
 - `generation-index.md` — active generation and rollover history
 - `backlog/` — deferred items with promotion criteria
 - `templates/roadmap-milestone-template.md` — milestone starter contract
@@ -25,14 +24,14 @@ contracts.
 ## Status
 
 **g01 sequencing intent met.** The core bridge, GUI, scan robustness, CI, and
-codebase-health lanes are complete enough to justify a release-focused
-generation rollover.
+codebase-health lanes are complete.
 
-**g02 is complete.** `v0.1-alpha` is now published.
+**g02 is active.** Milestones `001`–`006` complete. **`007+`** (`v0.2.0`) is
+unauthored — operator will return to spec Windows + Linux + VST3 later.
 
-**g03 is now active.** This generation is the short post-release stabilization
-lane: bug intake, claim corrections, install/runtime friction, and targeted
-evidence refresh without pretending the next step is immediate scope widening.
+The brief `g03` rollover was premature and absorbed back into `g02`. See
+`docs/logs/2026-08/17-153800-g03-absorbed-into-g02.md`. `g02.006` closed early
+2026-08-17 — see `docs/logs/2026-08/17-154400-g02-006-early-closeout.md`.
 
 ## Batch and Logging Rule
 
@@ -53,5 +52,4 @@ Before rollover:
 
 ## Next Task
 
-Execute `g03.001` — capture the first post-alpha stabilization batch from the
-published `v0.1-alpha` surface.
+Define `g02.007+` milestones when ready to spec `v0.2.0`.

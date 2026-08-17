@@ -5,7 +5,7 @@ Posture: strict-ready
 
 ## Changed
 
-- Compiled `docs/roadmaps/g03/batch-cards/001-g03-soundcheck-managed-settings-reader.md`
+- Compiled `docs/roadmaps/g02/batch-cards/001-g02-soundcheck-managed-settings-reader.md`
   as a Keepsake-owned card for the consumer half of Soundcheck's contract 002.
 - Added `src/managed_settings.{h,cpp}`: Soundcheck config-root resolution,
   managed-file discovery, a strict version 1 parser, and merge over
@@ -77,7 +77,7 @@ path, and it is a no-op.
 ## Sequencing note
 
 This was an operator-requested insert from Soundcheck, not a silent replacement
-of `g03.001`. Post-alpha stabilization remains the live lane and was not
+of `g02.006`. Post-alpha stabilization remains the live lane and was not
 displaced. Soundcheck's front doors already said the reader was downstream; that
 claim has now changed, but no Soundcheck file was edited in this batch.
 

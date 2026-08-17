@@ -6,7 +6,7 @@ Posture: strict-ready
 ## Changed
 
 - Compiled and executed
-  `docs/roadmaps/g03/batch-cards/002-g03-isolation-config-drift-and-override-matching.md`.
+  `docs/roadmaps/g02/batch-cards/002-g02-isolation-config-drift-and-override-matching.md`.
 - Added `src/glob_match.h` — one correct `*`/`?` matcher for every user-facing
   glob in the tree.
 - Deleted both partial matchers: `BridgePool::glob_match` and

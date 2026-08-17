@@ -38,6 +38,5 @@ Do not publish from chat memory alone. Releases should be backed by:
 
 ## Next Task
 
-Use the published `v0.1-alpha` release and checkpoint log as the authority, and
-route follow-up through `g03` stabilization rather than reopening release-cut
-work.
+Treat the published `v0.1-alpha` release as authority until `v0.2.0` is
+specced in `g02.007+`.

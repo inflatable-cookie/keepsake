@@ -1,7 +1,10 @@
-# G03.001 — Windows Release Claim Correction
+> **Superseded 2026-08-17:** milestone now `g02.006`. See
+> `docs/logs/2026-08/17-153800-g03-absorbed-into-g02.md`.
+
+# G02.006 — Windows Release Claim Correction
 
 Date: 2026-04-20
-Milestone: `g03.001`
+Milestone: `g02.006` (formerly `g03.001`)
 Status: complete
 
 ## Why this exists

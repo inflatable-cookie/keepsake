@@ -47,22 +47,19 @@ G01 is complete. The core bridge lanes exist: config → scan → cache → fact
 
 `v0.1-alpha` is now published.
 
-G03 is active. This is the short post-alpha stabilization stream:
-
-- take real release-window bug reports seriously
-- correct claims quickly if public wording outruns evidence
-- tighten install/runtime behavior on the published artifact surface
-- refresh evidence only where the public posture actually moves
-
-The strongest current proof is still the macOS + REAPER + VST2 lane. Treat
-broader platform/format support as experimental until g02 validation says
-otherwise.
+G02 is active. Milestones `001`–`006` are complete. **`007+`** (`v0.2.0` —
+Windows, Linux, VST3) is unauthored until the operator returns to spec it.
 
 The strongest current proof is still the published `macOS + REAPER + VST2`
 lane. Treat broader platform/format support as experimental until fresh
-stabilization evidence says otherwise.
+stabilization or `v0.2.0` matrix evidence says otherwise.
+
+Long-horizon direction lives in
+[`vision/002-strategic-horizons.md`](vision/002-strategic-horizons.md).
+
+**Operator direction:** next scope-widening release is **`v0.2.0`** with
+**Windows and Linux** as co-primary platforms and **VST3** in the push.
 
 ## Next Task
 
-Execute `g03.001` — absorb the first post-alpha report cluster into a real
-stabilization batch.
+Define `g02.007+` milestones when ready to spec `v0.2.0`.

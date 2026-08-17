@@ -1,10 +1,10 @@
-# 002 - G03 Isolation Config Drift and Override Matching
+# 002 - G02 Isolation Config Drift and Override Matching
 
 Status: complete
 Owner: Inflatable Cookie
 Updated: 2026-08-17
-Milestone refs: `docs/roadmaps/g03/001-post-alpha-stabilization-and-claim-corrections.md`
-Depends on: `docs/roadmaps/g03/batch-cards/001-g03-soundcheck-managed-settings-reader.md`
+Milestone refs: `docs/roadmaps/g02/006-post-alpha-stabilization-and-claim-corrections.md`
+Depends on: `docs/roadmaps/g02/batch-cards/001-g02-soundcheck-managed-settings-reader.md`
 Governing refs:
   - `docs/contracts/006-process-isolation-policy.md`
   - `docs/contracts/001-working-rules.md`
@@ -17,7 +17,7 @@ Close the isolation-config drift card 001 deliberately left open, and fix the
 glob matching that made the published `config.toml` override and whitelist
 documentation untrue in practice.
 
-This is claim correction plus a stabilization fix — squarely `g03.001` step 2
+This is claim correction plus a stabilization fix — squarely `g02.006` step 2
 and step 3 — not new scope.
 
 ## What Was Actually Wrong

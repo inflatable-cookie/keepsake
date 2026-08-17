@@ -7,9 +7,10 @@ the GNU Lesser General Public License v2.1.
 
 Current release posture:
 
-- strongest proven lane: macOS + REAPER + VST2
-- broader platform/format coverage exists in code but should be treated as
-  experimental until the `v0.1-alpha` validation matrix proves otherwise
+- strongest proven lane: macOS + REAPER + VST2 (`v0.1-alpha`)
+- next scope-widening target: **`v0.2.0`** — Windows x64 + Linux x64 as
+  co-primary platforms, VST3 in the push (operator-owned, 2026-08-17)
+- broader coverage remains experimental until the validation matrix defends it
 
 ---
 

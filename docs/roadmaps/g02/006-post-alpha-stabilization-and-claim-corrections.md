@@ -1,15 +1,16 @@
-# G03.001 — Post-Alpha Stabilization and Claim Corrections
+# G02.006 — Post-Alpha Stabilization and Claim Corrections
 
-Status: active
+Status: complete
 Owner: Inflatable Cookie
-Updated: 2026-07-16
+Updated: 2026-08-17
+Closed: 2026-08-17
 Governing refs:
   - docs/contracts/001-working-rules.md
   - docs/contracts/007-macos-native-editor-and-host-placeholder.md
   - docs/releases/v0.1-alpha.md
   - docs/releases/v0.1-alpha-validation-matrix.md
   - docs/known-issues-v0.1-alpha.md
-Auto-continuation: allowed within g03
+Auto-continuation: allowed within g02
 
 ## Scope
 
@@ -22,7 +23,9 @@ This milestone exists to absorb what the public release exposes:
 - installer friction and runtime regressions on the published artifacts
 - evidence refresh if the strongest claimed lane shifts materially
 
-This is a stabilization lane, not a quiet feature stream.
+This is a stabilization lane, not a quiet feature stream. It continues the
+`g02` release generation rather than a separate generation — the `g03`
+rollover was premature and has been absorbed back into `g02`.
 
 ## Steps
 
@@ -88,8 +91,17 @@ Acceptance:
 - stop if a reported problem reveals a missing contract or architecture gap
 - stop if the intended fix is really a new generation-scale feature
 
+## Closeout (2026-08-17)
+
+Operator closed this milestone early. No meaningful post-alpha user report
+cluster has arrived — Keepsake has no active user base yet. Batch cards
+001–002 (Soundcheck managed settings, isolation drift/glob fix) shipped useful
+fixes; further stabilization triage (batch 003) is deferred until real usage
+or a concrete report warrants it.
+
+`g02.007+` (`v0.2.0` — Windows, Linux, VST3) remains unauthored until the
+operator returns to spec that lane.
+
 ## Next Task
 
-Take the first real post-alpha report cluster and turn it into the opening
-stabilization batch rather than letting release follow-up scatter into ad hoc
-fixes.
+None — milestone closed. Resume via `g02.007+` when `v0.2.0` is specced.

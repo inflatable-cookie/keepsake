@@ -86,8 +86,8 @@ the project-local copy over any globally installed Effigy skill.
 Do not add `--repo .` while already inside the target repo. Do not edit
 `.github/workflows/` or run release mutations unless the user explicitly asks.
 
-Reference docs:
-- Effigy agent adoption: `docs/guides/047-agent-and-cross-repo-adoption.md`
-- Graph workflows: `docs/guides/076-code-graph-and-agent-workflows.md`
-- JSON contracts: `docs/guides/017-json-output-contracts.md`
+Effigy reference (project-local skill):
+- `.agents/skills/effigy/SKILL.md`
+- `.agents/skills/effigy/references/graph-assist.md`
+- `.agents/skills/effigy/references/json-envelope.md`
 <!-- END EFFIGY AGENT CONTRACT -->

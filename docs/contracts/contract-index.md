@@ -2,7 +2,7 @@
 
 Status: active
 Owner: Inflatable Cookie
-Updated: 2026-08-06
+Updated: 2026-08-17
 
 ## Coverage Rules
 
@@ -19,8 +19,8 @@ Updated: 2026-08-06
 | `001-working-rules.md` | Execution grammar and autonomy rules | keepsake repo | all | active |
 | `002-clap-factory-interface.md` | Descriptor shape, plugin ID namespace (multi-format), factory lifecycle | keepsake repo | g01.001+ | active |
 | `004-ipc-bridge-protocol.md` | Subprocess lifecycle, pipe protocol, shared memory layout, crash handling | keepsake repo | g01.002+ | active |
-| `006-process-isolation-policy.md` | Shared/per-binary/per-instance isolation, multi-instance bridge, config overrides, Soundcheck managed-settings merge | keepsake repo | g01.010+, g03 card 001 | active |
-| `007-macos-native-editor-and-host-placeholder.md` | Passive host-owned Cocoa view plus bridge-owned native legacy editor | keepsake repo | g03.001 | active |
+| `006-process-isolation-policy.md` | Shared/per-binary/per-instance isolation, multi-instance bridge, config overrides, Soundcheck managed-settings merge | keepsake repo | g01.010+, g02.006 card 001 | active |
+| `007-macos-native-editor-and-host-placeholder.md` | Passive host-owned Cocoa view plus bridge-owned native legacy editor | keepsake repo | g02.006 | active |
 | `008-native-vst2-host-capability-policy.md` | Host-aware same-architecture VST2 descriptor suppression | keepsake repo | post-alpha stabilization | active |
 
 ## External Contracts Keepsake Consumes
@@ -38,23 +38,28 @@ identically when Soundcheck is closed or never installed.
 | Boundary | Why needed | Blocking roadmaps | Next action |
 |---|---|---|---|
 | VeSTige loader ABI contract | Defines which VeSTige entrypoints Keepsake calls and how | release-hardening only if loader boundary drifts again | Author as 003 only if the boundary needs stabilizing during release work |
-| Platform config format | config.toml schema and scan path semantics | g02.001-g02.002 | Author once the alpha support envelope and user-facing config docs are settled |
+| Platform config format | config.toml schema and scan path semantics | `v0.2.0` (`g02.007+`) planning | Author when operator specs the next release lane |
 
 ## Roadmap Readiness
 
-G01 is complete. G02 is active.
+G01 is complete. `v0.1-alpha` is published. G02 is active (`001`–`006`
+complete; `007+` / `v0.2.0` unauthored).
 
-The release stream depends on the current contract set plus one still-thin
+The stabilization stream depends on the current contract set plus one still-thin
 boundary:
 
 - `002-clap-factory-interface.md` governs descriptor stability and IDs
 - `004-ipc-bridge-protocol.md` governs bridge lifecycle and failure semantics
 - `006-process-isolation-policy.md` governs shared/per-instance release
-  behavior
-- platform config format still needs a fuller user-facing contract before
-  packaging and install docs can be treated as settled
+  behavior and Soundcheck managed-settings merge
+- `007-macos-native-editor-and-host-placeholder.md` governs macOS editor posture
+- `008-native-vst2-host-capability-policy.md` governs host-aware descriptor
+  suppression
+- platform config format still needs promotion before install/config docs are
+  treated as fully settled (see horizon `H1` in
+  `docs/vision/002-strategic-horizons.md`)
 
 ## Next Task
 
-Execute g02.002 — decide whether the platform config schema needs promotion
-into its own contract before packaging and install docs close.
+Promote the platform config schema into its own contract when `g02.007+`
+milestones for `v0.2.0` are authored.

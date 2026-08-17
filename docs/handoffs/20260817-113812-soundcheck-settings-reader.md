@@ -9,10 +9,14 @@ handoff_path: /Users/tom/Dev/projects/keepsake/docs/handoffs/20260817-113812-sou
 tags: [coordination, handoff, soundcheck, isolation]
 ---
 
+> **Path update (2026-08-17):** `g03` was absorbed into `g02`. Canonical
+> milestone: `docs/roadmaps/g02/006-post-alpha-stabilization-and-claim-corrections.md`.
+> Batch cards live under `docs/roadmaps/g02/batch-cards/`.
+
 ## What This Thread Was Doing
 
 This is a spin-off from Soundcheck, not a continuation of Keepsake's current
-g03 stabilization lane.
+`g02.006` stabilization lane.
 
 Soundcheck already writes optional isolation policy to a managed file. The
 writer, UI, and fixture are done. What still isn't true is that Keepsake ever
@@ -49,7 +53,7 @@ Here is the short version of where things stand:
   valid-file merge, absent/invalid fallback, unsupported-schema fallback,
   stable-ID override matching, and no Soundcheck process dependency.
 - **Active spec lane:** none for this reader. Keepsake's advertised live lane
-  is still `g03.001` post-alpha stabilization. This spin-off is operator-
+  is still `g02.006` post-alpha stabilization. This spin-off is operator-
   requested; it is not already sequenced in Keepsake's front doors.
 - **Current batch card:** none in Keepsake. Do not treat Soundcheck card 050
   as executable here.
@@ -66,18 +70,18 @@ Here is the short version of where things stand:
     keeps Soundcheck on the same CLAP host contract as every other host
 - **Remaining continuation envelope:** compile a Keepsake-owned card, then
   implement the factory-startup reader. Stop if this would silently displace
-  `g03.001` without recording the insert.
+  `g02.006` without recording the insert.
 - **Lane budget / pause signal:** planning first. Keepsake working rules say
   stop on competing directions. The operator asked for this thread, so the
   work is wanted, but it still needs a Keepsake card and a clear relationship
-  to g03 before C++ changes.
+  to g02 before C++ changes.
 - **Key files:**
   - `/Users/tom/Dev/projects/soundcheck/docs/contracts/002-companion-api-and-keepsake-integration-contract.md`
   - `/Users/tom/Dev/projects/soundcheck/docs/contracts/fixtures/keepsake-settings-v1.toml`
   - `/Users/tom/Dev/projects/soundcheck/docs/roadmaps/g04/batch-cards/049-g04-companion-api-contract-gate.md`
   - `/Users/tom/Dev/projects/soundcheck/docs/roadmaps/g04/batch-cards/050-g04-companion-api-integration.md`
   - `/Users/tom/Dev/projects/keepsake/docs/roadmaps/g01/016-soundcheck-integration.md`
-  - `/Users/tom/Dev/projects/keepsake/docs/roadmaps/g03/001-post-alpha-stabilization-and-claim-corrections.md`
+  - `/Users/tom/Dev/projects/keepsake/docs/roadmaps/g02/006-post-alpha-stabilization-and-claim-corrections.md`
   - `/Users/tom/Dev/projects/keepsake/docs/contracts/006-process-isolation-policy.md`
   - `/Users/tom/Dev/projects/keepsake/docs/setup/config-reference.md`
   - `/Users/tom/Dev/projects/keepsake/AGENTS.md`
@@ -107,7 +111,7 @@ Please keep the next pass within these boundaries:
   localhost API proved unfit. Soundcheck g04.003 is complete on the producer
   side and explicitly left the reader downstream. Keepsake `g01.016` described
   the abandoned API and is marked superseded. Keepsake's live front doors
-  still point at `g03.001`.
+  still point at `g02.006`.
 - **How the plan fits the system:** Soundcheck contract 002 is the schema and
   fallback authority for the managed file. Keepsake contract 006 remains
   authority for what isolation modes mean at runtime. The managed file is not
@@ -127,7 +131,7 @@ Please keep the next pass within these boundaries:
   quietly pick a winner between 006 and the config reference while implementing
   the reader; the managed file must follow contract 002, and any `config.toml`
   merge has to stay honest about what Keepsake actually parses today. Also:
-  inserting this into g03 vs opening a later card is an intent checkpoint if
+  inserting this into g02 vs opening a later card is an intent checkpoint if
   the operator still wants stabilization to stay first.
 
 ## Suggested Next Move
@@ -139,7 +143,7 @@ abandoned API in writing.
 After that, compile a Keepsake-owned card rather than coding against
 Soundcheck's docs. The card should name the managed-file path, version 1
 schema, merge/fallback rules, factory-startup timing, and the five proofs in
-contract 002's cross-repo completion list. If g03.001 still has to stay first,
+contract 002's cross-repo completion list. If g02.006 still has to stay first,
 say so and leave this card queued instead of implementing it as an untracked
 side quest.
 
@@ -157,10 +161,10 @@ Soundcheck cannot finish. Before you finish, please:
    sequence the reader. Soundcheck's front doors already say the reader is
    downstream; only update Soundcheck if the reader lands and that claim
    changes.
-3. Say whether the reader card is ready, queued behind `g03.001`, or blocked
+3. Say whether the reader card is ready, queued behind `g02.006`, or blocked
    on the isolation-config mismatch.
 4. Record that this was an operator-requested insert from Soundcheck, not a
-   silent replacement of g03.
+   silent replacement of g02.
 5. Call out unresolved merge-key or default-mode drift plainly.
 6. Leave one clear next task for the following Keepsake thread.
 
@@ -172,7 +176,7 @@ another handoff just for that reason.
 Resolved 2026-08-17 by the Keepsake thread that picked this up.
 
 - Card compiled and executed:
-  `docs/roadmaps/g03/batch-cards/001-g03-soundcheck-managed-settings-reader.md`
+  `docs/roadmaps/g02/batch-cards/001-g02-soundcheck-managed-settings-reader.md`
   (status `complete`).
 - Reader landed in `src/managed_settings.{h,cpp}`, called once from
   `keepsake_factory_init`. All five contract 002 proofs pass in the
@@ -180,11 +184,11 @@ Resolved 2026-08-17 by the Keepsake thread that picked this up.
   Soundcheck never launched.
 - Evidence log:
   `docs/logs/2026-08/17-115406-soundcheck-managed-settings-reader.md`.
-- `g01.016` was not revived, no Soundcheck file was edited, and `g03.001`
+- `g01.016` was not revived, no Soundcheck file was edited, and `g02.006`
   remains the live lane — this went in as an operator-requested insert.
 - The contract 006 vs config-reference drift was left unresolved by card 001 by
   design, then closed on the same day by
-  `docs/roadmaps/g03/batch-cards/002-g03-isolation-config-drift-and-override-matching.md`.
+  `docs/roadmaps/g02/batch-cards/002-g02-isolation-config-drift-and-override-matching.md`.
   Both documents now agree with the shipped code, and the two broken glob
   matchers that surfaced alongside it are replaced by one correct
   implementation. Evidence:

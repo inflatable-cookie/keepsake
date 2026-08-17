@@ -18,7 +18,8 @@ can prove in a fresh release window.
 
 ## Vision Artifacts
 
-- [001-keepsake-vision.md](./001-keepsake-vision.md)
+- [001-keepsake-vision.md](./001-keepsake-vision.md) — product vision and constraints
+- [002-strategic-horizons.md](./002-strategic-horizons.md) — Atlas long-horizon runway
 
 ## Constraints
 
@@ -35,5 +36,6 @@ can prove in a fresh release window.
 
 ## Next Task
 
-Use the published `v0.1-alpha` support envelope as the current claim boundary,
-and route follow-up work through `g03.001` post-alpha stabilization.
+Define `g02.007+` milestones when ready to spec the operator-owned `v0.2.0`
+envelope — Windows, Linux, and VST3 — per
+[`002-strategic-horizons.md`](./002-strategic-horizons.md).

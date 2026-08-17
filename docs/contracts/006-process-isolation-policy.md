@@ -114,7 +114,7 @@ Keepsake owns discovery, validation, merge, and fallback:
 Reload is host restart or plugin rescan. There is no file watcher.
 
 Implementation and proofs:
-`docs/roadmaps/g03/batch-cards/001-g03-soundcheck-managed-settings-reader.md`.
+`docs/roadmaps/g02/batch-cards/001-g02-soundcheck-managed-settings-reader.md`.
 
 ### IPC protocol changes
 
@@ -193,8 +193,8 @@ For audio processing, the host sends PROCESS for each instance in sequence
 ## Roadmap Impact
 
 - g01.010: first implementation
-- g03 batch card 001: Soundcheck managed-settings reader
-- g03 batch card 002: default-mode correction and override matching fixes
+- g02.006 batch card 001: Soundcheck managed-settings reader
+- g02.006 batch card 002: default-mode correction and override matching fixes
 - All subsequent milestones that touch bridge lifecycle or instantiation
 
 ## Next Task

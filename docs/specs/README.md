@@ -39,8 +39,9 @@ is the preservation surface.
 
 ## Current Active Specs
 
-No active specs. The first spec should be created when the first roadmap
-milestone is ready to be shaped into batch cards.
+No active specs. Completed `g02.006` batch cards live under
+`docs/roadmaps/g02/batch-cards/`. Create a master spec when `g02.007+` /
+`v0.2.0` is specced.
 
 ## Templates
 
@@ -51,6 +52,4 @@ milestone is ready to be shaped into batch cards.
 
 ## Next Task
 
-Create a master spec when the first roadmap milestone is large or uncertain
-enough to justify provisional planning before promotion into
-architecture/contracts.
+Define `g02.007+` milestones when ready to spec `v0.2.0`.

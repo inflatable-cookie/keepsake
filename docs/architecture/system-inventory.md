@@ -2,7 +2,7 @@
 
 Status: active
 Owner: Inflatable Cookie
-Updated: 2026-08-06
+Updated: 2026-08-17
 Vision refs: docs/vision/001-keepsake-vision.md
 
 ## Execution-Relevant Surfaces
@@ -34,5 +34,4 @@ Vision refs: docs/vision/001-keepsake-vision.md
 
 ## Next Task
 
-Use g02.002 to package the now-defined alpha surfaces cleanly and keep the
-unsupported or diagnostic lanes out of the install/release claims.
+Promote platform config to a contract when `g02.007+` / `v0.2.0` is specced.

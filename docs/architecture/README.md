@@ -32,4 +32,5 @@ They set the realized constraints roadmap batches must honor.
 
 ## Next Task
 
-Validate contract 007 without adding a host-specific runtime seam.
+Extend host capability identity coverage when `v0.2.0` planning names target
+hosts; validate contract 007 without adding host-specific runtime seams.

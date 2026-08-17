@@ -52,5 +52,5 @@ live link was not rewritten to a nonexistent Inflatable Cookie repository.
 
 ## Next Task
 
-Commit and push the ownership migration, then resume the active `g03.001`
+Commit and push the ownership migration, then resume the active `g02.006`
 stabilization lane.

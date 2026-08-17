@@ -1,9 +1,9 @@
-# 001 - G03 Soundcheck Managed Settings Reader
+# 001 - G02 Soundcheck Managed Settings Reader
 
 Status: complete
 Owner: Inflatable Cookie
 Updated: 2026-08-17
-Milestone refs: `docs/roadmaps/g03/001-post-alpha-stabilization-and-claim-corrections.md`
+Milestone refs: `docs/roadmaps/g02/006-post-alpha-stabilization-and-claim-corrections.md`
 Governing refs:
   - `docs/contracts/006-process-isolation-policy.md`
   - `docs/contracts/001-working-rules.md`
@@ -14,8 +14,8 @@ Auto-start next card: no
 ## Provenance
 
 This is an operator-requested insert from Soundcheck, not a replacement for
-`g03.001`. Soundcheck's producer half (its card 050) is complete and its
-contract 002 explicitly leaves the consumer half to Keepsake. `g03.001`
+`g02.006`. Soundcheck's producer half (its card 050) is complete and its
+contract 002 explicitly leaves the consumer half to Keepsake. `g02.006`
 remains the advertised live stabilization lane and is not displaced by this
 card.
 
@@ -158,7 +158,7 @@ either reading and needs no fourth dialect. Closing the drift is a separate
 docs-correction task.
 
 **Closed 2026-08-17** by
-[card 002](002-g03-isolation-config-drift-and-override-matching.md). Checking
+[card 002](002-g02-isolation-config-drift-and-override-matching.md). Checking
 the code settled both rows without a product judgment call, and turned up that
 `match` never compared against the file path at all and that both glob matchers
 in the tree were broken.

@@ -14,7 +14,10 @@ Logs capture dated evidence and assessments.
 
 ## Recent Evidence
 
-- [`2026-08/17-121518-isolation-config-drift-and-glob-fix.md`](2026-08/17-121518-isolation-config-drift-and-glob-fix.md) — closed the contract 006 vs config-reference drift against the shipped code and replaced two broken glob matchers with one correct implementation, changing isolation behaviour for existing `*needle*` overrides
+- [`2026-08/17-154400-g02-006-early-closeout.md`](2026-08/17-154400-g02-006-early-closeout.md) — operator closed `g02.006` early; no active users yet; `007+` deferred — premature `g03` rollover reversed; post-alpha work lives in `g02.006`; `v0.2.0` continues as `g02.007+`
+- [`2026-08/17-153400-operator-v0.2.0-direction.md`](2026-08/17-153400-operator-v0.2.0-direction.md)
+- [`2026-08/17-121518-isolation-config-drift-and-glob-fix.md`](2026-08/17-121518-isolation-config-drift-and-glob-fix.md) — closed contract 006 vs config-reference drift and fixed glob matchers
+- [`2026-08/17-153000-northstar-refresh-and-atlas-runway.md`](2026-08/17-153000-northstar-refresh-and-atlas-runway.md) — Northstar refresh closed stale pointers, added CLAUDE/PAPERCUTS bridges, and promoted Atlas strategic horizons
 - [`2026-08/17-115406-soundcheck-managed-settings-reader.md`](2026-08/17-115406-soundcheck-managed-settings-reader.md) — Keepsake now reads Soundcheck's managed isolation file at factory startup, merges it over `config.toml`, and ignores it whole when it is absent or invalid, with no Soundcheck process dependency
 - [`2026-08/06-150000-native-vst2-host-capability-matrix.md`](2026-08/06-150000-native-vst2-host-capability-matrix.md) — classified the current public CLAP host set against native VST2 support and activated exact macOS process identities for Studio Pro, REAPER, and Bitwig
 - [`2026-07/29-214612-inflatable-cookie-ownership-migration.md`](2026-07/29-214612-inflatable-cookie-ownership-migration.md) — moved repository, product, runtime vendor, canonical links, and docs authority from Infinite Loop Audio to Inflatable Cookie while preserving dated historical evidence
@@ -52,5 +55,4 @@ Logs capture dated evidence and assessments.
 
 ## Next Task
 
-Open the short post-alpha stabilization lane and log the first real
-release-window bugfix or claim-correction batch.
+Define `g02.007+` milestones when ready to spec `v0.2.0`.

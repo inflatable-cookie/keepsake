@@ -2,7 +2,7 @@
 
 Status: active
 Owner: Inflatable Cookie
-Updated: 2026-04-12
+Updated: 2026-08-17
 Vision refs: this document is the primary vision artifact
 
 ## Long-Term Outcome
@@ -140,5 +140,6 @@ release matrix says otherwise.
 
 ## Next Task
 
-Update g02.001 — reconcile all public release claims and known-issues posture
-against this vision before packaging or publication work continues.
+Review public claims against the validation matrix; define `g02.007+` when
+ready to spec `v0.2.0` per
+[`002-strategic-horizons.md`](./002-strategic-horizons.md).

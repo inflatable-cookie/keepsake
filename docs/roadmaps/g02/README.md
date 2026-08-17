@@ -1,7 +1,8 @@
-# G02 — v0.1 Alpha Release Stream
+# G02 — Alpha Release and Post-Alpha Stream
 
-Status: complete
+Status: active
 Started: 2026-04-12
+Reopened: 2026-08-17
 
 ## Milestones
 
@@ -12,47 +13,43 @@ Started: 2026-04-12
 | `003` | [Alpha Validation Matrix and Evidence Pack](003-alpha-validation-matrix-and-evidence.md) | complete |
 | `004` | [Publish v0.1-alpha](004-publish-v0.1-alpha.md) | complete |
 | `005` | [macOS UI Model and Interactive Fallback Prototype](005-macos-ui-model-and-fallback-prototype.md) | complete |
+| `006` | [Post-Alpha Stabilization and Claim Corrections](006-post-alpha-stabilization-and-claim-corrections.md) | complete |
+| `007+` | `v0.2.0` (Windows + Linux + VST3) | unauthored |
+
+## Batch Cards (`006`)
+
+| Card | Title | Status |
+|---|---|---|
+| `001` | [Soundcheck Managed Settings Reader](batch-cards/001-g02-soundcheck-managed-settings-reader.md) | complete |
+| `002` | [Isolation Config Drift and Override Matching](batch-cards/002-g02-isolation-config-drift-and-override-matching.md) | complete |
+
+Batch 003 (further triage) was never opened. `006` closed early — no active
+user base yet.
 
 ## Sequencing Intent
 
-G02 turns the current working bridge into a releasable alpha without pretending
-that every implemented code path is already proven enough to claim support.
+G02 turns the working bridge into releasable artifacts and honest public
+claims, then continues toward operator-owned **`v0.2.0`** without premature
+generation rollover.
 
-The generation closes when:
-- the supported alpha scope is explicit and honest
-- public docs match real behavior and known limitations
-- release artifacts and install instructions exist
-- the claimed support matrix has evidence behind it
-- `v0.1-alpha` ships with changelog, known issues, and reproducible artifacts
+The alpha cut (`001`–`005`) shipped `v0.1-alpha`.
 
-This generation is release-hardening, not feature expansion. New feature work
-should stay out unless it is directly required to make the alpha claim set
-true. `005` exists under that exception: the current macOS alpha story still
-needs a viable editor model that does not pretend universal interactive embed.
+**`006`** closed 2026-08-17 after cards 001–002; post-alpha triage deferred
+until real usage warrants it.
+
+**`007+`** — operator-owned **`v0.2.0`** (Windows + Linux co-primary, VST3
+in the push) — milestones not yet authored. Operator will return to spec this
+lane later.
+
+See `docs/vision/002-strategic-horizons.md`.
 
 ## Release Posture
 
-- Prefer a conservative alpha scope over broad unsupported claims.
-- Treat `macOS + REAPER + VST2` as the strongest current evidence lane.
-- Treat other platforms, hosts, and formats as unsupported or experimental
-  until the validation matrix proves otherwise.
+- Primary validated lane: `macOS + REAPER + VST2` (`v0.1-alpha`).
+- Windows, Linux, VST3, AU v2, and 32-bit remain experimental until matrix
+  evidence moves the envelope.
 - Docs drift is a release blocker, not polish.
 
 ## Next Task
 
-Treat `g02` as closed. Route follow-up through `g03.001` post-alpha
-stabilization instead of reopening the release stream.
-
-Current release posture outcome:
-- `g02.001` effectively closed in docs posture: the alpha scope/claims baseline
-  is now explicit
-- `g02.002` effectively closed in release posture: version, changelog, install
-  surface, release notes, and artifact naming are now aligned to the current
-  support envelope
-- `g02.003` effectively closed in evidence posture: packaged-artifact REAPER
-  smoke is fresh on the supported macOS lane, and the release matrix/known
-  issues are updated to current reality
-- `g02.004` complete — `v0.1-alpha` is tagged, published, and backed by a
-  post-publication packaged-artifact smoke on the primary macOS lane
-- `g02.005` complete — macOS defaults to the bridge-owned live editor path;
-  IOSurface preview remains diagnostic-only
+Define `g02.007+` milestones when the operator is ready to spec `v0.2.0`.
