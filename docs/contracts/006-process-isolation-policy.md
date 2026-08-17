@@ -2,7 +2,7 @@
 
 Status: active
 Owner: Inflatable Cookie
-Updated: 2026-04-11
+Updated: 2026-08-17
 Depends on: docs/contracts/004-ipc-bridge-protocol.md
 Authority owners: Inflatable Cookie
 Affects: g01.010 and all subsequent milestones that touch the bridge lifecycle
@@ -22,21 +22,26 @@ individual isolation for problematic ones.
 Keepsake supports three isolation modes, configurable globally and
 overridable per-plugin:
 
-| Mode | Behaviour | Default for |
+| Mode | Behaviour | Used for |
 |---|---|---|
-| `shared` | All plugins sharing this mode load in a single long-lived bridge process per architecture | Trusted plugins (default) |
+| `shared` | All plugins sharing this mode load in a single long-lived bridge process per architecture | Trusted plugins, or sessions where process overhead matters |
 | `per-binary` | One bridge process per unique plugin binary; multiple instances of the same plugin share a process | Explicitly configured |
-| `per-instance` | One bridge process per plugin instance (current model) | Blacklisted / crash-prone plugins |
+| `per-instance` | One bridge process per plugin instance | Crash-prone plugins, and the shipped global default |
 
 ### Default behaviour
 
-- The global default is `shared` — a single bridge process hosts all plugin
-  instances unless overridden.
-- Separate shared processes exist per architecture (native, x86_64, 32-bit)
-  and per format (VST2, VST3, AU) — so there may be up to ~6 shared
+- The global default is `per-instance` — every plugin instance gets its own
+  bridge process unless overridden.
+- The original design default was `shared`. It changed to `per-instance` on
+  2026-04-11 (`59e916a`) after a hanging plugin in a shared process froze every
+  other instance with it. Strongest isolation by default is the deliberate
+  posture for a bridge hosting arbitrary legacy binaries; `shared` remains
+  available for users who want the efficiency and accept the blast radius.
+- In `shared` mode, separate processes exist per architecture (native, x86_64,
+  32-bit) and per format (VST2, VST3, AU) — so there may be up to ~6 shared
   processes in a mixed-format session, but not one per instance.
-- Per-plugin overrides in `config.toml` can escalate to `per-binary` or
-  `per-instance`.
+- Per-plugin overrides in `config.toml` can move any plugin to any of the three
+  modes, in either direction.
 - If a shared process crashes, all plugins in that process are affected.
   Keepsake reports the crash for each affected instance and may optionally
   restart the shared process.
@@ -46,21 +51,70 @@ overridable per-plugin:
 ```toml
 [isolation]
 # Global default: "shared", "per-binary", or "per-instance"
-default = "shared"
+default = "per-instance"
 
-# Per-plugin overrides (match by plugin ID or name glob)
+# Per-plugin overrides
 [[isolation.override]]
 match = "keepsake.vst2.58667358"  # Serum, by plugin ID
-mode = "per-instance"
+mode = "shared"
 
 [[isolation.override]]
 match = "keepsake.vst3.*"         # All VST3 plugins
 mode = "per-binary"
 
 [[isolation.override]]
-match = "*Kontakt*"               # By name glob
+match = "*Kontakt*"               # By display name
 mode = "per-instance"
+
+[[isolation.override]]
+match = "/Library/Audio/Plug-Ins/VST/*"  # By file path
+mode = "shared"
 ```
+
+### Override matching
+
+A `config.toml` `match` value is compared against three keys, in this order,
+and the row applies if any of them matches:
+
+1. the stable exposed CLAP plugin ID (`keepsake.<format>.<uid>`)
+2. the plugin's display name
+3. the plugin's file path
+
+The first override row that matches wins; later rows are not consulted.
+
+Matching uses one shared glob implementation (`src/glob_match.h`) supporting
+`*` (any run of characters, including none) and `?` (exactly one character).
+Wildcards cross path separators. A pattern with no wildcards must match a key
+exactly. The same implementation backs `[[expose.plugin]]` whitelist matching.
+
+Managed-file rows are the one exception: they match the plugin ID exactly and
+are never globbed. See below.
+
+### Managed settings source
+
+`config.toml` is not the only source of these three modes. Soundcheck may write
+a managed file that Keepsake reads once at factory startup, governed by
+Soundcheck's `002-companion-api-and-keepsake-integration-contract.md`. That file
+is not a second isolation model — it supplies the same `shared`, `per-binary`,
+and `per-instance` modes this contract defines, and everything below still
+governs what those modes mean at runtime.
+
+Keepsake owns discovery, validation, merge, and fallback:
+
+- a valid supported managed file replaces the equivalent `config.toml` isolation
+  fields; anything it omits falls through to `config.toml`, then to defaults
+- managed overrides key on the stable exposed CLAP plugin ID and match it
+  exactly — they are never globbed and never matched against a display name,
+  which is what keeps them distinct from `config.toml`'s `match` rows
+- a missing, unreadable, malformed, or unsupported-schema file is ignored as a
+  whole, with a bounded diagnostic and no partial merge
+- no network request, process discovery, or Soundcheck lifecycle check occurs,
+  and enumeration or instantiation never fails because central policy is absent
+
+Reload is host restart or plugin rescan. There is no file watcher.
+
+Implementation and proofs:
+`docs/roadmaps/g03/batch-cards/001-g03-soundcheck-managed-settings-reader.md`.
 
 ### IPC protocol changes
 
@@ -131,12 +185,19 @@ For audio processing, the host sends PROCESS for each instance in sequence
 - Verify that crashing the shared process marks all hosted instances as
   crashed.
 - Verify that config.toml overrides are read and applied correctly.
+- Verify that override rows match by plugin ID, display name, and file path,
+  and that `*` and `?` globs behave as specified (`isolation-overrides`).
+- Verify that a managed-file row matches its plugin ID exactly and never
+  matches a display name, a file path, or a glob (`managed-settings`).
 
 ## Roadmap Impact
 
 - g01.010: first implementation
+- g03 batch card 001: Soundcheck managed-settings reader
+- g03 batch card 002: default-mode correction and override matching fixes
 - All subsequent milestones that touch bridge lifecycle or instantiation
 
 ## Next Task
 
-Implement g01.010 — multi-instance bridge and configurable isolation.
+Decide whether shared-process crash recovery (the deferred step 4 under crash
+handling) is still wanted, or should be written out of this contract.

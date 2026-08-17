@@ -12,6 +12,10 @@
 struct IsolationOverride {
     std::string match;
     std::string mode; // "shared", "per-binary", "per-instance"
+    // Rows sourced from Soundcheck's managed file key on the stable exposed
+    // CLAP plugin ID and match it exactly — never globbed, never matched
+    // against a display name. config.toml rows keep their glob semantics.
+    bool exact_plugin_id = false;
 };
 
 // Exposure mode: which plugins does Keepsake make visible to the host?

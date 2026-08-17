@@ -19,9 +19,19 @@ Updated: 2026-08-06
 | `001-working-rules.md` | Execution grammar and autonomy rules | keepsake repo | all | active |
 | `002-clap-factory-interface.md` | Descriptor shape, plugin ID namespace (multi-format), factory lifecycle | keepsake repo | g01.001+ | active |
 | `004-ipc-bridge-protocol.md` | Subprocess lifecycle, pipe protocol, shared memory layout, crash handling | keepsake repo | g01.002+ | active |
-| `006-process-isolation-policy.md` | Shared/per-binary/per-instance isolation, multi-instance bridge, config overrides | keepsake repo | g01.010+ | active |
+| `006-process-isolation-policy.md` | Shared/per-binary/per-instance isolation, multi-instance bridge, config overrides, Soundcheck managed-settings merge | keepsake repo | g01.010+, g03 card 001 | active |
 | `007-macos-native-editor-and-host-placeholder.md` | Passive host-owned Cocoa view plus bridge-owned native legacy editor | keepsake repo | g03.001 | active |
 | `008-native-vst2-host-capability-policy.md` | Host-aware same-architecture VST2 descriptor suppression | keepsake repo | post-alpha stabilization | active |
+
+## External Contracts Keepsake Consumes
+
+| Contract | Boundary | Owning surface | Keepsake side | Status |
+|---|---|---|---|---|
+| `../soundcheck/docs/contracts/002-companion-api-and-keepsake-integration-contract.md` | Soundcheck's managed `integrations/keepsake.toml` schema and fallback rules | soundcheck repo | reader, validation, merge, fallback — `src/managed_settings.cpp` | implemented |
+
+Keepsake owns everything on its own side of that seam. There is no live API,
+process discovery, or Soundcheck lifecycle dependency, and Keepsake behaves
+identically when Soundcheck is closed or never installed.
 
 ## Missing or Pending Contracts
 

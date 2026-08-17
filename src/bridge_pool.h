@@ -52,8 +52,11 @@ public:
     void shutdown_all();
 
     // Resolve isolation mode for a plugin (checks config overrides).
+    // config.toml rows glob against the stable plugin ID, the display name,
+    // and the plugin file path. Managed-file rows match the ID exactly.
     IsolationMode resolve_mode(const std::string &plugin_id,
-                                const std::string &plugin_name) const;
+                                const std::string &plugin_name,
+                                const std::string &plugin_path = {}) const;
 
     // Set the global default mode.
     void set_default_mode(IsolationMode mode) { default_mode = mode; }
@@ -61,10 +64,12 @@ public:
     struct Override {
         std::string match; // plugin ID or glob
         IsolationMode mode;
+        bool exact_plugin_id = false; // match the stable plugin ID exactly
     };
 
-    void add_override(const std::string &match, IsolationMode mode) {
-        overrides.push_back({match, mode});
+    void add_override(const std::string &match, IsolationMode mode,
+                       bool exact_plugin_id = false) {
+        overrides.push_back({match, mode, exact_plugin_id});
     }
 
 private:
@@ -78,7 +83,4 @@ private:
                           const std::string &plugin_path,
                           uint32_t format,
                           IsolationMode mode);
-
-    bool glob_match(const std::string &pattern,
-                     const std::string &text) const;
 };

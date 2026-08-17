@@ -1,4 +1,5 @@
 #include "factory_internal.h"
+#include "glob_match.h"
 #include "plugin_labels.h"
 #include "plugin_identity.h"
 
@@ -97,21 +98,6 @@ void map_features(const Vst2PluginInfo &info, PluginEntry &entry) {
     entry.features_ptrs.push_back(nullptr);
 }
 
-bool glob_match_simple(const std::string &pattern, const std::string &text) {
-    if (pattern == text) return true;
-    if (pattern == "*") return true;
-    if (pattern.size() > 1 && pattern[0] == '*') {
-        std::string suffix = pattern.substr(1);
-        return text.size() >= suffix.size() &&
-               text.substr(text.size() - suffix.size()) == suffix;
-    }
-    if (pattern.size() > 2 && pattern[0] == '*' && pattern.back() == '*') {
-        std::string needle = pattern.substr(1, pattern.size() - 2);
-        return text.find(needle) != std::string::npos;
-    }
-    return false;
-}
-
 } // namespace
 
 bool plugin_is_exposed(const Vst2PluginInfo &plugin,
@@ -119,7 +105,7 @@ bool plugin_is_exposed(const Vst2PluginInfo &plugin,
     if (cfg.expose_mode == "all") return true;
     if (cfg.expose_mode == "whitelist") {
         for (const auto &wl : cfg.whitelist) {
-            if (glob_match_simple(wl.path, plugin.file_path)) {
+            if (keepsake_glob_match(wl.path, plugin.file_path)) {
                 return true;
             }
         }

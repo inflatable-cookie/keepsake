@@ -1,4 +1,5 @@
 #include "bridge_pool.h"
+#include "glob_match.h"
 #include <cstdio>
 #include <cstring>
 
@@ -22,38 +23,23 @@ std::string BridgePool::make_key(const std::string &bridge_binary,
     return bridge_binary;
 }
 
-bool BridgePool::glob_match(const std::string &pattern,
-                              const std::string &text) const {
-    // Simple glob: * matches any substring
-    if (pattern == "*") return true;
-    if (pattern.find('*') == std::string::npos) return pattern == text;
-
-    // Split pattern on '*' and match segments in order
-    size_t pi = 0, ti = 0;
-    size_t star = pattern.find('*');
-
-    // Check prefix before first *
-    if (star > 0) {
-        if (text.substr(0, star) != pattern.substr(0, star)) return false;
-        ti = star;
-    }
-
-    // Check suffix after last *
-    size_t last_star = pattern.rfind('*');
-    if (last_star < pattern.size() - 1) {
-        std::string suffix = pattern.substr(last_star + 1);
-        if (text.size() < suffix.size()) return false;
-        if (text.substr(text.size() - suffix.size()) != suffix) return false;
-    }
-
-    return true; // Simplified — good enough for common patterns
-}
-
 IsolationMode BridgePool::resolve_mode(const std::string &plugin_id,
-                                         const std::string &plugin_name) const {
+                                         const std::string &plugin_name,
+                                         const std::string &plugin_path) const {
     for (const auto &ov : overrides) {
-        if (glob_match(ov.match, plugin_id) ||
-            glob_match(ov.match, plugin_name)) {
+        // Managed-file rows key on the stable plugin ID only — a display name
+        // that happens to look like an ID must not pull in someone else's
+        // policy. config.toml rows keep the historical ID-or-name glob.
+        if (ov.exact_plugin_id) {
+            if (ov.match == plugin_id) return ov.mode;
+            continue;
+        }
+        // config.toml rows glob against every key a user could reasonably
+        // have written: the exposed plugin ID, the display name, and the
+        // plugin file path.
+        if (keepsake_glob_match(ov.match, plugin_id) ||
+            keepsake_glob_match(ov.match, plugin_name) ||
+            (!plugin_path.empty() && keepsake_glob_match(ov.match, plugin_path))) {
             return ov.mode;
         }
     }

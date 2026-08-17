@@ -9,6 +9,21 @@ Started: 2026-04-17
 |---|---|---|
 | `001` | [Post-Alpha Stabilization and Claim Corrections](001-post-alpha-stabilization-and-claim-corrections.md) | active |
 
+## Batch Cards
+
+| Card | Title | Status |
+|---|---|---|
+| `001` | [Soundcheck Managed Settings Reader](batch-cards/001-g03-soundcheck-managed-settings-reader.md) | complete |
+| `002` | [Isolation Config Drift and Override Matching](batch-cards/002-g03-isolation-config-drift-and-override-matching.md) | complete |
+
+Card 001 is an operator-requested insert from Soundcheck, not a replacement for
+`g03.001`. It closed the consumer half of Soundcheck's contract 002 — Keepsake
+now reads Soundcheck's managed isolation file at factory startup.
+
+Card 002 is ordinary `g03.001` work: it closed the isolation-config drift card
+001 left open and fixed the glob matching that made the published override and
+whitelist documentation untrue. Stabilization remains the live lane.
+
 ## Sequencing Intent
 
 G03 starts after `v0.1-alpha` publication.

@@ -1,5 +1,6 @@
 #include "factory_internal.h"
 #include "host_capabilities.h"
+#include "managed_settings.h"
 #include "debug_log.h"
 
 #include <cstring>
@@ -100,7 +101,7 @@ static const clap_plugin_t *factory_create_plugin(
             else if (e.needs_x86_64_bridge && !s_bridge_x86_64_path.empty())
                 bridge = &s_bridge_x86_64_path;
 
-            auto isolation = s_pool.resolve_mode(e.id, e.name);
+            auto isolation = s_pool.resolve_mode(e.id, e.name, e.plugin_path);
             return keepsake_plugin_create(
                 host, &e.descriptor, e.plugin_path, *bridge,
                 e.num_inputs, e.num_outputs, e.num_params, e.has_editor, e.format,
@@ -199,6 +200,13 @@ bool keepsake_factory_init(const char *plugin_path) {
                 cfg.expose_vst2_native ? "true" : "false");
     }
 
+    // Merge Soundcheck's managed isolation policy over config.toml. This is a
+    // plain file read at factory startup — no API, no process discovery, no
+    // Soundcheck lifecycle check — and a missing or rejected file leaves the
+    // config.toml values in place.
+    // Ref: ../soundcheck/docs/contracts/002-companion-api-and-keepsake-integration-contract.md
+    config_merge_managed_settings(cfg);
+
     // Configure isolation policy
     if (cfg.isolation_default == "per-binary")
         s_pool.set_default_mode(IsolationMode::PER_BINARY);
@@ -211,7 +219,7 @@ bool keepsake_factory_init(const char *plugin_path) {
         IsolationMode m = IsolationMode::SHARED;
         if (ov.mode == "per-binary") m = IsolationMode::PER_BINARY;
         else if (ov.mode == "per-instance") m = IsolationMode::PER_INSTANCE;
-        s_pool.add_override(ov.match, m);
+        s_pool.add_override(ov.match, m, ov.exact_plugin_id);
     }
 
     // Check for rescan triggers

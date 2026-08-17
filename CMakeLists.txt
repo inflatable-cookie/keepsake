@@ -68,6 +68,25 @@ if(BUILD_TESTING)
     )
     add_test(NAME config-cache-stale-entry COMMAND config-cache-test)
 
+    add_executable(managed-settings-test
+        tools/managed-settings-test.cpp
+        src/managed_settings.cpp
+        src/bridge_pool.cpp
+    )
+    target_include_directories(managed-settings-test PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+    )
+    add_test(NAME managed-settings COMMAND managed-settings-test)
+
+    add_executable(isolation-override-test
+        tools/isolation-override-test.cpp
+        src/bridge_pool.cpp
+    )
+    target_include_directories(isolation-override-test PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+    )
+    add_test(NAME isolation-overrides COMMAND isolation-override-test)
+
     add_executable(vst2-string-buffer-test
         tools/vst2-string-buffer-test.cpp
     )
@@ -126,6 +145,7 @@ add_library(keepsake MODULE
     src/plugin_state.cpp
     src/config.cpp
     src/config_cache.cpp
+    src/managed_settings.cpp
     src/bridge_pool.cpp
 )
 

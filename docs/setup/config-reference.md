@@ -177,6 +177,8 @@ path = "/Library/Audio/Plug-Ins/VST/APC.vst"
 
 Only the listed plugins will be exposed to the host. Everything else Keepsake finds is ignored.
 
+`path` is compared against the plugin's file path and accepts the same globs as `match` above — `*` and `?`. So `path = "/Library/Audio/Plug-Ins/VST/*"` whitelists a whole folder.
+
 ---
 
 ## `[isolation]` — Process isolation behaviour
@@ -199,7 +201,7 @@ For most setups, `"per-instance"` is the right choice. Use `"shared"` or `"per-b
 
 ### `[[isolation.override]]` — Per-plugin isolation
 
-Override the isolation mode for specific plugins by path or glob pattern.
+Override the isolation mode for specific plugins.
 
 ```toml
 [isolation]
@@ -210,11 +212,63 @@ match = "/Library/Audio/Plug-Ins/VST/StablePlugin.vst"
 mode = "shared"
 
 [[isolation.override]]
-match = "/Library/Audio/Plug-Ins/VST/UnstablePlugin.vst"
+match = "*Kontakt*"
 mode = "per-instance"
 ```
 
-`match` is compared against the full plugin file path. Basic glob patterns (`*`, `?`) are supported.
+`match` is compared against three things, and the row applies if **any** of them matches:
+
+| Key | Example |
+|---|---|
+| The plugin ID Keepsake exposes to your host | `keepsake.vst2.41706364` |
+| The plugin's display name | `Serum`, `*Kontakt*` |
+| The plugin's file path | `/Library/Audio/Plug-Ins/VST/Serum.vst` |
+
+Glob patterns are supported in all three: `*` matches any run of characters (including none) and `?` matches exactly one. A `match` with no wildcards has to match exactly. Wildcards cross `/` and `\`, so `/Library/*/Serum.vst` matches a Serum nested any number of directories deep.
+
+The **first** matching row wins. Put your most specific rows first.
+
+> **Fixed in this release:** glob matching previously misbehaved — `*Kontakt*` matched every plugin, `Serum*` matched nothing, `?` was not implemented at all, and `match` was never compared against the file path despite this page documenting it. If you wrote overrides against an earlier build, re-check that they still select what you intended. Whitelist patterns under `[[expose.plugin]]` had the same problem and are fixed the same way.
+
+---
+
+## Soundcheck managed settings
+
+If you use [Soundcheck](https://github.com/inflatable-cookie/soundcheck), it can set your isolation policy centrally instead of you editing `config.toml` by hand. Soundcheck writes a small managed file and Keepsake reads it at startup. Soundcheck never edits your `config.toml`, and Keepsake never talks to Soundcheck — the file is the only connection, so Keepsake works exactly the same when Soundcheck is closed or not installed.
+
+### File location
+
+| Platform | Path |
+|---|---|
+| macOS | `~/Library/Application Support/Soundcheck/integrations/keepsake.toml` |
+| Windows | `%APPDATA%\Soundcheck\integrations\keepsake.toml` |
+| Linux | `$XDG_CONFIG_HOME/soundcheck/integrations/keepsake.toml` (or `~/.config/soundcheck/integrations/keepsake.toml`) |
+
+### What it can set
+
+Only isolation policy. Scan paths, exposure, GUI, and everything else stay in your `config.toml`.
+
+```toml
+schema_version = 1
+
+[isolation]
+default = "per-instance"
+
+[[isolation.override]]
+plugin_id = "keepsake.vst2.41706364"
+mode = "per-binary"
+```
+
+Overrides key on the plugin ID Keepsake exposes to your host — not a path and not a name. The ID must match exactly; globs are not expanded here.
+
+### How it combines with `config.toml`
+
+- A valid managed `default` replaces the `default` in your `config.toml`.
+- Managed overrides win for the plugin IDs they name. Your `config.toml` overrides still apply to every other plugin.
+- If the managed file is missing, unreadable, malformed, or written for a schema version Keepsake does not support, it is ignored **as a whole** and your `config.toml` applies unchanged. Keepsake prints one line saying why and carries on — a bad managed file never blocks plugin scanning or loading.
+- Unknown keys inside a supported file are ignored, so a newer Soundcheck will not break an older Keepsake.
+
+Reload works the same as `config.toml`: rescan plugins in your host or restart the host.
 
 ---
 
