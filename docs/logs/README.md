@@ -14,6 +14,7 @@ Logs capture dated evidence and assessments.
 
 ## Recent Evidence
 
+- [`2026-08/29-154300-northstar-refresh-and-agents-review.md`](2026-08/29-154300-northstar-refresh-and-agents-review.md) — refreshed the Northstar facets, rewrote the root agent guide, and corrected stale canonical next-task pointers
 - [`2026-08/17-154400-g02-006-early-closeout.md`](2026-08/17-154400-g02-006-early-closeout.md) — operator closed `g02.006` early; no active users yet; `007+` deferred — premature `g03` rollover reversed; post-alpha work lives in `g02.006`; `v0.2.0` continues as `g02.007+`
 - [`2026-08/17-153400-operator-v0.2.0-direction.md`](2026-08/17-153400-operator-v0.2.0-direction.md)
 - [`2026-08/17-121518-isolation-config-drift-and-glob-fix.md`](2026-08/17-121518-isolation-config-drift-and-glob-fix.md) — closed contract 006 vs config-reference drift and fixed glob matchers

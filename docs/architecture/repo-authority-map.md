@@ -2,7 +2,7 @@
 
 Status: active
 Owner: Inflatable Cookie
-Updated: 2026-07-16
+Updated: 2026-08-29
 
 ## Ownership
 
@@ -31,5 +31,6 @@ No captured frame returns to Keepsake or the CLAP parent view.
 
 ## Next Task
 
-Prove the boundary in Soundcheck and REAPER, then implement screenshot capture
-only on the Soundcheck side as generic host behavior.
+Keep this host boundary stable. Any future screenshot or inspection work belongs
+to the host owner as generic behavior, not to a Keepsake companion or runtime
+seam; reopen only for a concrete integration request.
