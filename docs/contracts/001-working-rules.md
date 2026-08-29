@@ -2,7 +2,7 @@
 
 Status: active
 Owner: Inflatable Cookie
-Updated: 2026-04-10
+Updated: 2026-08-29
 Depends on: docs/architecture/system-architecture.md
 Authority owners: Inflatable Cookie
 Affects: all execution work in this repo
@@ -155,5 +155,5 @@ and agent sessions are used for implementation work.
 
 ## Next Task
 
-Author the first roadmap milestone (CLAP factory proof-of-concept and VeSTige
-loader scaffold) and create the CLAP factory interface contract.
+Define `g02.007+` milestones for `v0.2.0` when the operator is ready to spec
+that lane; promote the platform config boundary before execution relies on it.
