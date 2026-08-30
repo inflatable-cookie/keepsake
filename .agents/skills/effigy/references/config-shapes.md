@@ -14,6 +14,54 @@ Effigy splits config across:
 **`qa:ci:fast`**. Built-in commands (`test`, `init`, `doctor`, …) come from Effigy
 itself; see `effigy --help` for the list.
 
+## `[docs_policy.graph]`
+
+This optional repository-owned profile teaches the local Markdown graph how to
+classify documentation, resolve currentness, and name typed relations. It is
+configuration consumed by `effigy graph index` and graph queries; it does not
+ship a separate docs-context command.
+
+```toml
+[docs_policy.graph]
+roots = ["README.md", "docs"]
+
+[docs_policy.graph.fields.state]
+labels = ["State"]
+cardinality = "one"
+
+[docs_policy.graph.fields.maintainer]
+labels = ["Maintainer"]
+cardinality = "one"
+
+[docs_policy.graph.currentness]
+field = "state"
+current = ["current", "published"]
+historical = ["historical", "retired"]
+
+[docs_policy.graph.kinds.reference]
+include = ["docs/reference/*.md"]
+exclude = []
+authority = 100
+default-currentness = "unknown"
+
+[docs_policy.graph.kinds.archive]
+include = ["docs/archive/*.md"]
+exclude = []
+authority = 10
+default-currentness = "historical"
+
+[docs_policy.graph.relations.related]
+labels = ["Related", "See also"]
+headings = ["Related"]
+```
+
+Northstar consumers should keep their profile in the committed manifest emitted
+by the Northstar starter; this generic example does not assume Northstar names.
+
+The profile grammar and ranking rules live in
+`docs/contracts/041-documentation-graph-profile-contract.md`; the architecture
+decision is `docs/architecture/024-repository-defined-documentation-graph.md`.
+
 ## `[tasks]`
 
 Tasks can be shell strings, refs to other tasks, or Rhai scripts. Examples:
@@ -46,10 +94,39 @@ Tasks can be shell strings, refs to other tasks, or Rhai scripts. Examples:
   { rhai = "scripts/install-local-bin-links.rhai" },
 ]
 
+# Cost ladder: cheap orientation -> focused gate -> full board
+health = [{ task = "fmt:check" }]
+validate = [{ task = "fmt:check" }, { run = "cargo check --workspace" }]
+qa = [{ task = "validate" }, { task = "test" }, { task = "qa:docs" }]
+
 # Task with explicit run block (for richer config)
 [tasks."smoke:release"]
 run = { rhai = "scripts/check-release-smoke.rhai" }
 ```
+
+Keep `health` seconds-scale because `effigy doctor` delegates to it. Never
+point `health` at `qa`, directly or through another task.
+
+Managed multi-process tasks use the same selector surface. `start` controls
+spawn order; `tab` controls presentation order:
+
+```toml
+[tasks.dev]
+mode = "tui"
+health_wait = true
+health_wait_timeout_secs = 90
+secrets = "required"
+concurrent = [
+  { task = "api", start = 1, tab = 2 },
+  { run = "bun run web:dev", start = 2, tab = 1 },
+]
+```
+
+Run `effigy dev --headless` or set `EFFIGY_MANAGED_HEADLESS=1` for an attached
+supervisor without the TUI. Use `effigy dev status`, `logs [process]
+[--follow]`, and `stop` from another shell. Readiness covers container-owned
+routes started by the lifecycle entry. Forced local-dev secret unlock still
+skips missing keys declared `required = false`.
 
 Typical Rhai wrappers for typed deploy / distribution helpers:
 

@@ -83,7 +83,21 @@ elsewhere on disk. Adding `--repo .` when already inside the target repo:
 
 Just run `effigy <task>` from inside the repo.
 
-## 7. Bonus: don't reinvent QA chains
+## 7. Never collapse `health` into `qa`
+
+Keep the task-cost ladder explicit:
+
+- `health` — cheap orientation: fmt, toolchain floor, docs-forbidden,
+  `cargo check`, or equivalent seconds-scale probes
+- `validate` — mid-cost focused validation
+- `qa` — the full test/docs/contracts board
+
+Never write `health = [{ task = "qa" }]`, directly or through another task.
+`effigy doctor` delegates to `tasks.health`; collapsing the ladder turns a
+diagnostic command into the full board. Doctor warns and skips that delegation
+when it can prove the health task reaches `qa` or a full test suite.
+
+## 8. Bonus: don't reinvent QA chains
 
 If a repo has `qa:ci:fast`, `qa:ci:local`, or `qa` aggregator tasks, run those
 instead of building a new chain. Aggregators encode the project's pre-push

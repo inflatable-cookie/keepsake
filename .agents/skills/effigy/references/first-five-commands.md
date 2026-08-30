@@ -59,9 +59,9 @@ Use this when you need runnable selectors, QA entrypoints, or task inventory.
 Show the resolved test plan **without running it**. Tells you which test
 runners will fire, in what order, with what selectors.
 
-Expected output is a plan tree. If the repo has `tasks.test` it overrides
-the built-in plan; otherwise built-in test detection runs (cargo-nextest with
-fallback to cargo test, vitest, etc.).
+Expected output is a plan tree. It never executes tests. The plan combines
+named `[test.suites]` when configured, or built-in detection otherwise
+(Vitest plus cargo-nextest with a cargo-test fallback, for example).
 
 For machine parsing: `effigy test --plan --json`.
 
@@ -88,7 +88,7 @@ Use this when you need to programmatically pick a task to run or feed
 results into another tool.
 
 ```bash
-effigy --json tasks | jq -r '.result.payload.tasks[].name'
+effigy --json tasks | jq -r '.result.catalog_tasks[].task'
 ```
 
 Use this when another tool or agent step needs task inventory in a stable JSON
@@ -100,9 +100,11 @@ When the job is code understanding, use this directly. Do not require the
 other commands first if the question is already code-location shaped:
 
 ```bash
-effigy graph status --json
 effigy graph explore "<task-shaped question>" --max-files 6 --max-bytes 12288 --json
 ```
+
+The query builds or refreshes the index on demand. Use `graph status` only
+when the pre-refresh diagnostic state is itself relevant.
 
 Details: `graph-assist.md`.
 

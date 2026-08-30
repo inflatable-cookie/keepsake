@@ -1,19 +1,26 @@
 # JSON Envelope
 
-Every Effigy command run with `--json` returns a single line of JSON in the
-`effigy.command.v1` envelope shape.
+Every Effigy command run with `--json` returns one JSON document in the
+`effigy.command.v1` envelope shape. `graph watch --json` is the streaming
+exception described below.
 
 ## Envelope shape
 
 ```json
 {
   "schema": "effigy.command.v1",
-  "command": "tasks",
-  "result": {
-    "payload": { ... }
+  "schema_version": 1,
+  "ok": true,
+  "command": {
+    "kind": "tasks",
+    "name": "tasks"
   },
-  "error": null,
-  "diagnostics": [ ... ]
+  "result": {
+    "schema": "effigy.tasks.v1",
+    "schema_version": 1,
+    "catalog_tasks": [ ... ]
+  },
+  "error": null
 }
 ```
 
@@ -22,14 +29,18 @@ On error:
 ```json
 {
   "schema": "effigy.command.v1",
-  "command": "tasks",
+  "schema_version": 1,
+  "ok": false,
+  "command": {
+    "kind": "task",
+    "name": "missing-task"
+  },
   "result": null,
   "error": {
-    "code": "INVALID_MANIFEST",
+    "kind": "RunnerError",
     "message": "...",
     "details": { ... }
-  },
-  "diagnostics": [ ... ]
+  }
 }
 ```
 
@@ -37,8 +48,11 @@ Key invariants:
 
 - `schema` is always `effigy.command.v1`.
 - Either `result` or `error` is non-null, never both.
-- `result.payload` carries the command-specific data.
+- `result` carries the command-specific data. Some graph reports additionally
+  nest their report under `result.payload`.
 - `error.details` is structured (object), not a string.
+- A failed command may place useful command-specific report data under
+  `error.details`.
 
 ## Payload schemas worth parsing
 
@@ -46,14 +60,14 @@ These commands produce stable JSON payloads suitable for agents to consume:
 
 | Command | Payload contains |
 |---------|------------------|
-| `effigy --json tasks` | array of tasks with name, source catalog, kind |
-| `effigy --json doctor` | check results with status, message, fix hint |
+| `effigy --json tasks` | `result.catalog_tasks[]` and `result.builtin_tasks[]`; catalog rows use `task`, `manifest`, and `run` |
+| `effigy --json doctor` | `result.findings[]` with `check_id`, `evidence`, `severity`, and `remediation` |
 | `effigy --json doctor <selector> <args...>` | routing decision tree |
-| `effigy --json test --plan` | resolved test plan tree |
-| `effigy --json completion candidates` | shell completion candidates |
+| `effigy --json test --plan` | `result.targets[]` with resolved test plans |
+| `effigy --json config completion candidates` | `result.candidates[]` and completion cache metadata |
 | `effigy --json config` | merged config tree |
-| `effigy --json release status` | release gate states |
-| `effigy --json graph status` | index freshness, stale paths, counts |
+| `effigy --json release status` | `result.gates.results[]` on success; failed gate checks may carry the same report under `error.details.gates.results[]` |
+| `effigy --json graph status` | `result.payload.freshness`, stale paths, and counts |
 | `effigy --json graph explore "<q>"` | primary owners, excerpts, relations, guidance |
 | `effigy --json graph affected` | affected files, likely tests/tasks after edits |
 | `effigy --json graph context "<q>"` | ranked context items (lower-level than explore) |
@@ -66,45 +80,47 @@ These commands produce stable JSON payloads suitable for agents to consume:
 **Pull all task names:**
 
 ```bash
-effigy --json tasks | jq -r '.result.payload.tasks[].name'
+effigy --json tasks | jq -r '.result.catalog_tasks[].task'
 ```
 
 **Find all failing doctor checks:**
 
 ```bash
 effigy --json doctor \
-  | jq -r '.result.payload.checks[] | select(.status == "FAIL") | .id + ": " + .message'
+  | jq -r '.result.findings[] | select(.severity == "error") | .check_id + ": " + .evidence'
 ```
 
 **Extract release gate states:**
 
 ```bash
 effigy --json release status --check-gates \
-  | jq -r '.result.payload.gates[] | "\(.name): \(.status)"'
+  | jq -r '(.result // .error.details).gates.results[] | "\(.name): \(.passed)"'
 ```
 
-**Check graph freshness before explore:**
+**Inspect report-only graph freshness:**
 
 ```bash
 effigy --json graph status | jq '.result.payload.stale_paths'
 ```
+
+Graph queries refresh before reading, so this is a diagnostic view rather than
+a required preflight.
 
 **Detect error envelope:**
 
 ```bash
 output=$(effigy --json doctor)
 if [ "$(echo "$output" | jq -r '.error')" != "null" ]; then
-  echo "$output" | jq -r '.error.code + ": " + .error.message' >&2
+  echo "$output" | jq -r '.error.kind + ": " + .error.message' >&2
   exit 1
 fi
 ```
 
 ## Streaming vs single-shot
 
-Most commands emit a **single envelope** as one line of JSON. Long-running
-commands (`effigy run`, `effigy dev`) may emit multiple `effigy.event.v1`
-lines followed by a terminal `effigy.command.v1`. Filter on `schema` to
-distinguish.
+Most commands emit one `effigy.command.v1` JSON document. The graph watcher
+only emits newline-delimited `effigy.graph.watch.event.v1` documents; it does
+not emit the one-shot envelope. Filter on `schema` when consuming that stream.
 
 ## Full spec
 

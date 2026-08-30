@@ -31,24 +31,52 @@ Never run these unprompted:
 | Command | Side effect |
 |---------|-------------|
 | `effigy release prepare --yes` | Writes prepare artifacts |
-| `effigy release execute --yes` | Pushes tag, creates GitHub release |
-| `effigy release verify-install --tag vX.Y.Z` | Network-side verification |
+| `effigy release execute --yes` | Commits prepared files and pushes the annotated tag |
+| `gh workflow run release-binaries.yml -f tag=vX.Y.Z` | Starts binary publication for the immutable tag |
+| `effigy release verify-install --tag vX.Y.Z` | Effigy binary network-side verification; not for library or service repos |
 
 ## Canonical sequence
 
 When a human explicitly asks for a release:
 
-1. `effigy release simulate`
-2. `effigy release status --check-gates`
-3. `effigy release prepare --plan`
-4. `effigy release prepare --yes --check-gates`
-5. `effigy release execute --plan`
-6. `effigy release execute --yes`
-7. `effigy release verify-install --tag vX.Y.Z`
-8. `effigy changelog extract CHANGELOG.md --version X.Y.Z`
+1. Confirm the clean candidate commit is pushed to `main`, then record
+   `candidate_sha=$(git rev-parse HEAD)`.
+2. `gh workflow run ci.yml --ref main`
+3. Find the `workflow_dispatch` run whose `headSha` equals `$candidate_sha`,
+   then run `gh run watch <RUN_ID> --exit-status`.
+4. `effigy release simulate`
+5. `effigy release status --check-gates`
+6. `effigy release prepare --plan`
+7. `effigy release prepare --yes --check-gates`
+8. `effigy release execute --plan`
+9. `effigy release execute --yes`
+10. Run the target repo's declared publication and consumer verification.
+    - Effigy itself: `gh workflow run release-binaries.yml -f tag=vX.Y.Z`
+      followed by `effigy release verify-install --tag vX.Y.Z`.
+    - Library or service repos: use their repo-owned consumer smoke. Do not run
+      Effigy's fixed binary verifier.
+11. `effigy changelog extract CHANGELOG.md --version X.Y.Z`
+
+Use this query to select the run; never substitute a merely recent green run:
+
+```sh
+gh run list --workflow ci.yml --branch main --commit "$candidate_sha" \
+  --event workflow_dispatch --limit 1 \
+  --json databaseId,headSha,status,conclusion,url
+```
+
+Effigy's configured `ci` release gate checks the same exact-SHA invariant.
+Missing, pending, red, or different-commit evidence blocks every gate-checked
+preview and prepare. Local release gates then validate deterministic release
+file mutations; they do not replace hosted CI on the candidate source.
 
 If any step fails, **stop**. Surface the failure to the human. Do not retry
 with bypass flags.
+
+`release verify-install` is not a generic release closer. It installs the
+`effigy` Cargo package and runs Effigy CLI checks against a fixture repo.
+Invoking it from a non-Effigy root is a routing error, not evidence that the
+target library or service tag is broken.
 
 ## Failed release recovery
 

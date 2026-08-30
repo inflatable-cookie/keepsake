@@ -22,18 +22,21 @@ implementation, or changed-file impact.
 | Known term, unknown symbol id | `graph search` |
 | Symbol id already known | `graph node`, `graph callers`, `graph callees` |
 | Exact token / missing symbol proof | `rg` (not graph) |
+| Boundaries, isolation, or validation risk | `scan boundary-violations`, `scan dead-code`, `scan validation-gaps` |
 
 ## Standard sequence
 
 ```bash
-effigy graph status --json
-# when freshness.state is missing-index, refresh-recommended, or degraded,
-# or freshness.usable is false:
-effigy graph index --json
-
 effigy graph explore "<task-shaped question>" \
   --max-files 6 --max-bytes 12288 --json
 ```
+
+The query builds or refreshes a stale index before reading it. Use
+`graph status --json` only when you need the report-only pre-refresh state; add
+`--refresh` when the status command should also rebuild a stale or missing
+index. Graph data queries have a 120000ms wall-clock budget by default;
+`EFFIGY_GRAPH_TIMEOUT_MS=<MS>` overrides it and `0` disables the bound. Explicit
+`graph index` and `graph watch` commands are unbounded.
 
 Good query shapes:
 
@@ -47,18 +50,30 @@ After edits:
 git diff --name-only | effigy graph affected --stdin --json
 ```
 
+When the question is risk rather than ownership, switch to graph-aware scans:
+
+```bash
+effigy scan boundary-violations --json
+effigy scan dead-code --json
+git diff --name-only | effigy scan validation-gaps --stdin --json
+```
+
 ## Rules
 
 - **`graph explore` first** for task-shaped questions. Trust excerpts for
   first-pass orientation; open files only when the excerpt is insufficient.
 - **Ask implementation questions, not token questions.** Prefer
   `where is X handled` over raw identifiers when you want owners and tests.
-- **`graph index` is explicit.** Queries do not rebuild the index for you.
-- **Trust state matters.** If status reports `missing-index`,
-  `refresh-recommended`, or `degraded`, rebuild before using graph output as
-  navigation proof.
+- **Queries refresh before reading.** `search`, `node`, `callers`, `callees`,
+  `impact`, `context`, `explore`, `affected`, and `files` build or refresh the
+  index on demand.
+- **Trust state still matters.** Gate on the freshness returned by the query.
+  A query may still report `refresh-recommended` when another refresh outlives
+  its bounded wait; retry after that refresh completes.
 - **`graph affected` narrows validation** — it does not prove exhaustive test
   reachability.
+- **Graph-aware scans are review aids.** They do not prove semantic dead code,
+  coverage, or architecture correctness in the compiler sense.
 - **`rg` stays mandatory** for exact tokens, missing symbols, and pre-edit proof.
 - **Do not hide the rest of Effigy.** Graph is for code understanding; deploy,
   docs, state, containers, release, and direct task execution still start with
@@ -66,9 +81,12 @@ git diff --name-only | effigy graph affected --stdin --json
 - **Rebuild on corruption or unknown future schema:**
 
 ```bash
-rm -rf .effigy/graph
+mv .effigy/graph .effigy/graph.backup-$(date +%s)
 effigy graph index --json
 ```
+
+Move the cache aside so it remains recoverable while the replacement index is
+built.
 
 ## Lower-level context packet
 
