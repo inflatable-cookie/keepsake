@@ -8,8 +8,8 @@ Updated: 2026-08-17
 
 - Every execution-relevant boundary should map to a contract or an explicit
   pending item below.
-- Roadmap milestones must reference the governing contract ids directly.
-- If a required boundary has no contract, mark the roadmap blocked and close
+- Northstar tasks must reference the governing contract ids directly.
+- If a required boundary has no contract, mark the task blocked and close
   the gap before execution continues.
 
 ## Contract Register
@@ -42,8 +42,10 @@ identically when Soundcheck is closed or never installed.
 
 ## Roadmap Readiness
 
-G01 is complete. `v0.1-alpha` is published. G02 is active (`001`–`006`
-complete; `007+` / `v0.2.0` unauthored).
+G01 is complete and compacted (`docs/roadmaps/archive/g01.md`).
+`v0.1-alpha` is published. G02 is active (`001`–`006` complete, outcomes
+collapsed into `docs/roadmaps/g02/README.md`; `007+` / `v0.2.0`
+unauthored).
 
 The stabilization stream depends on the current contract set plus one still-thin
 boundary:
@@ -61,5 +63,5 @@ boundary:
 
 ## Next Task
 
-Promote the platform config schema into its own contract when `g02.007+`
-milestones for `v0.2.0` are authored.
+- Promote the platform config schema into its own contract when `g02.007+`
+tasks for `v0.2.0` are authored.

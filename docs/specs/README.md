@@ -6,9 +6,10 @@ into architecture and contracts.
 ## Artifact Types
 
 - `NNN-<slug>.md` — master specs for material goals or epics
-- `batch-cards/NNN-<slug>.md` — tightly scoped execution cards derived from an
-  active master spec
-- `batch-cards/README.md` — explains how the batch-card lane should work
+
+Execution cards live as Northstar tasks under `docs/roadmaps/gNN/` (see
+`docs/roadmaps/templates/task-template.md`); specs do not carry a nested
+card hierarchy.
 
 ## Rule
 
@@ -28,7 +29,7 @@ spec text, once the change has moved out of planning.
 
 Use an explicit lifecycle:
 
-- `active` when the spec still governs live planning or an imminent batch
+- `active` when the spec still governs live planning or an imminent task
 - `retired-in-place` when the lane is closed but the artifact still deserves a
   short-lived place in the active tree for traceability
 - `archived` when the artifact no longer governs live work and should move out
@@ -39,17 +40,14 @@ is the preservation surface.
 
 ## Current Active Specs
 
-No active specs. Completed `g02.006` batch cards live under
-`docs/roadmaps/g02/batch-cards/`. Create a master spec when `g02.007+` /
-`v0.2.0` is specced.
+No active specs. Create a master spec when `g02.007+` / `v0.2.0` is specced;
+execution cards for it will live as `g02` Northstar tasks.
 
 ## Templates
 
-- `batch-cards/README.md`
 - `archive/README.md`
 - `templates/master-spec-template.md`
-- `templates/batch-card-template.md`
 
 ## Next Task
 
-Define `g02.007+` milestones when ready to spec `v0.2.0`.
+None active. Define `g02.007+` tasks when ready to spec `v0.2.0`.

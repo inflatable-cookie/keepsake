@@ -61,7 +61,7 @@ continuing small event-injection tweaks.
 
 ## Evidence
 
-- [g01.017 roadmap note](../../roadmaps/g01/017-iosurface-embedded-editors.md)
+- [g01.017 roadmap note](../../roadmaps/archive/g01.md) (per-task file compacted 2026-09-09; original path `docs/roadmaps/g01/017-iosurface-embedded-editors.md`)
 - [14-091500-windows-apc-embed-thread-model.md](14-091500-windows-apc-embed-thread-model.md)
 - harness lane in [tools/mac-clap-host.mm](/Users/tom/Dev/projects/keepsake/tools/mac-clap-host.mm)
 - mac embedded host path in [src/plugin_gui_mac_embed.mm](/Users/tom/Dev/projects/keepsake/src/plugin_gui_mac_embed.mm)

@@ -27,7 +27,7 @@ The baseline docs spine is `vision/`, `architecture/`, `contracts/`,
 `roadmaps/`, and `logs/`.
 
 Keepsake also uses the stricter delivery spine: `contracts/001-working-rules.md`
-and `specs/` so execution grammar and batch-card planning are explicit once
+and `specs/` so execution grammar and task planning are explicit once
 development work begins.
 
 Start in `vision/` for long-horizon direction, `architecture/` and `contracts/`
@@ -42,13 +42,16 @@ If `specs/` exists, treat it as provisional planning that should promote into
 Keepsake is an Inflatable Cookie product. The canonical repository is
 [`inflatable-cookie/keepsake`](https://github.com/inflatable-cookie/keepsake).
 
-G01 is complete. The core bridge lanes exist: config → scan → cache → factory
-→ bridge → audio, plus GUI, CI, and codebase-health follow-through.
+G01 is complete and compacted (see
+[`roadmaps/archive/g01.md`](roadmaps/archive/g01.md)). The core bridge lanes
+exist: config → scan → cache → factory → bridge → audio, plus GUI, CI, and
+codebase-health follow-through.
 
 `v0.1-alpha` is now published.
 
-G02 is active. Milestones `001`–`006` are complete. **`007+`** (`v0.2.0` —
-Windows, Linux, VST3) is unauthored until the operator returns to spec it.
+G02 is active. Tasks `001`–`006` are complete with outcomes collapsed into
+the generation README. **`007+`** (`v0.2.0` — Windows, Linux, VST3) is
+unauthored until the operator returns to spec it.
 
 The strongest current proof is still the published `macOS + REAPER + VST2`
 lane. Treat broader platform/format support as experimental until fresh
@@ -62,4 +65,4 @@ Long-horizon direction lives in
 
 ## Next Task
 
-Define `g02.007+` milestones when ready to spec `v0.2.0`.
+None active. Define `g02.007+` tasks when ready to spec `v0.2.0`.

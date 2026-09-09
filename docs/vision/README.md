@@ -36,6 +36,7 @@ can prove in a fresh release window.
 
 ## Next Task
 
-Define `g02.007+` milestones when ready to spec the operator-owned `v0.2.0`
-envelope — Windows, Linux, and VST3 — per
-[`002-strategic-horizons.md`](./002-strategic-horizons.md).
+Define `g02.007+` tasks when the operator is ready to spec the
+operator-owned `v0.2.0` envelope — Windows, Linux, and VST3 — per
+[`002-strategic-horizons.md`](./002-strategic-horizons.md); no task is
+active until then.

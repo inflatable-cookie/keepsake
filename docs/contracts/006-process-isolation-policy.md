@@ -5,7 +5,7 @@ Owner: Inflatable Cookie
 Updated: 2026-08-17
 Depends on: docs/contracts/004-ipc-bridge-protocol.md
 Authority owners: Inflatable Cookie
-Affects: g01.010 and all subsequent milestones that touch the bridge lifecycle
+Affects: g01.010 and all subsequent tasks that touch the bridge lifecycle
 
 ## Problem
 
@@ -113,8 +113,9 @@ Keepsake owns discovery, validation, merge, and fallback:
 
 Reload is host restart or plugin rescan. There is no file watcher.
 
-Implementation and proofs:
-`docs/roadmaps/g02/batch-cards/001-g02-soundcheck-managed-settings-reader.md`.
+Implementation and proofs: `src/managed_settings.{h,cpp}`, called once from
+`keepsake_factory_init` — see
+`docs/logs/2026-08/17-115406-soundcheck-managed-settings-reader.md`.
 
 ### IPC protocol changes
 
@@ -193,9 +194,9 @@ For audio processing, the host sends PROCESS for each instance in sequence
 ## Roadmap Impact
 
 - g01.010: first implementation
-- g02.006 batch card 001: Soundcheck managed-settings reader
-- g02.006 batch card 002: default-mode correction and override matching fixes
-- All subsequent milestones that touch bridge lifecycle or instantiation
+- g02.006 task 001: Soundcheck managed-settings reader
+- g02.006 task 002: default-mode correction and override matching fixes
+- All subsequent tasks that touch bridge lifecycle or instantiation
 
 ## Next Task
 

@@ -31,4 +31,4 @@ Start there.
 ## Next Task
 
 Promote the platform config schema into its own contract when `g02.007+`
-milestones for `v0.2.0` are authored.
+tasks for `v0.2.0` are authored.

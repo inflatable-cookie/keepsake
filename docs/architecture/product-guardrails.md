@@ -54,8 +54,7 @@ Vision refs: docs/vision/001-keepsake-vision.md
 - Completion requires real evidence, not only plausible prose.
 
 ## Autonomy Expectations
-
-- Agents may continue only across ready cards inside the same valid lane with
+- Agents may continue only across ready tasks inside the same valid lane with
   current governing refs.
 - Agents must stop on planning gaps, contradictions, failed validation, missing
   authority, or user-facing ambiguity that exceeds these guardrails.

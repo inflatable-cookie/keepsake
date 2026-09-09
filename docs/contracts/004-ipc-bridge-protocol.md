@@ -5,7 +5,7 @@ Owner: Inflatable Cookie
 Updated: 2026-04-10
 Depends on: docs/architecture/system-architecture.md, docs/contracts/002-clap-factory-interface.md
 Authority owners: Inflatable Cookie
-Affects: g01.002 and all subsequent milestones that use the subprocess bridge
+Affects: g01.002 and all subsequent tasks that use the subprocess bridge
 
 ## Problem
 
@@ -226,7 +226,7 @@ thread while processing is stopped.
 ## Roadmap Impact
 
 - g01.002: First implementation of this protocol
-- All subsequent milestones that add MIDI, state save/restore, GUI forwarding,
+- All subsequent tasks that add MIDI, state save/restore, GUI forwarding,
   or cross-architecture bridging
 
 ## Planning Notes
@@ -234,7 +234,7 @@ thread while processing is stopped.
 This protocol is intentionally simple for the initial implementation. Carla
 uses a more sophisticated approach (ring buffers in shared memory for RT
 control, separate shared memory regions for different concerns). Keepsake can
-adopt those optimizations in later milestones if pipe latency proves
+adopt those optimizations in later tasks if pipe latency proves
 insufficient.
 
 The pipe-as-synchronization approach avoids platform-specific semaphore issues

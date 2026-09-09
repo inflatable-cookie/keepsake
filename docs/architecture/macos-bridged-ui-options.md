@@ -5,8 +5,9 @@ Owner: Inflatable Cookie
 Updated: 2026-07-16
 Vision refs: docs/vision/001-keepsake-vision.md
 Related roadmap refs:
-  - docs/roadmaps/g01/013-embedded-editors.md
-  - docs/roadmaps/g01/017-iosurface-embedded-editors.md
+  - docs/roadmaps/archive/g01.md (g01 roll-up; per-task files compacted
+    2026-09-09, superseding the `013` embedded-editor and `017` IOSurface
+    task files)
 Related evidence:
   - docs/logs/2026-04/16-221500-mac-iosurface-embedded-ui-architecture-decision.md
   - docs/logs/2026-07/15-123000-macos-x64-editor-hosting-research.md

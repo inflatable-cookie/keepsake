@@ -5,7 +5,7 @@ Owner: Inflatable Cookie
 Updated: 2026-07-12
 Depends on: docs/architecture/system-architecture.md, docs/contracts/001-working-rules.md
 Authority owners: Inflatable Cookie
-Affects: g01.001 and all subsequent milestones that touch the factory or descriptor shape
+Affects: g01.001 and all subsequent tasks that touch the factory or descriptor shape
 
 ## Problem
 
@@ -221,7 +221,7 @@ completion order cannot change stable IDs or cache contents.
 ## Roadmap Impact
 
 - g01.001: CLAP factory proof-of-concept — first implementation of this contract
-- All subsequent milestones that add descriptor fields, shell plugin support,
+- All subsequent tasks that add descriptor fields, shell plugin support,
   or modify factory behavior
 
 ## Planning Notes
