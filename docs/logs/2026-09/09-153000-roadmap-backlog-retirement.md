@@ -67,8 +67,11 @@ so no rule or design promotion was needed. Migration is not approval.
 
 Validation actually run 2026-09-09: `effigy qa` passed (docs
 next-action, heading, forbidden checks); `effigy qa:northstar` passed
-(same three checks); `git diff --check` clean.
-PR link, exact-head review, and merge commit recorded here on closeout.
+(same three checks); `git diff --check` clean. Review follow-up fixed
+one pre-existing broken relative link in `docs/roadmaps/README.md`
+(`../logs/2026-09/09/09-142635-...` has no nested `09/` dir; corrected
+to `../logs/2026-09/09-142635-...`) and re-ran `effigy qa` plus
+`git diff --check`, both clean.
 
 ## Next task
 
