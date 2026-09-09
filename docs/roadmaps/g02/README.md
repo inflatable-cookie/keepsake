@@ -84,9 +84,11 @@ this lane later.
 
 ## Open commitments
 
-- `docs/roadmaps/backlog/001-macos-preview-lane-disposition.md` —
+- `docs/triage/2026-09-09-macos-preview-lane-disposition.md` —
   retain-or-remove decision for the diagnostic preview lane, deferred
-  until cleanup outranks release work.
+  until cleanup outranks release work. Triage is non-authoritative;
+  promote to a `g02` task only when planning authority makes scope,
+  generation, dependencies, ordering, and frontier placement unambiguous.
 - Platform config schema promotion before `v0.2.0` execution relies on
   it (see the contract index).
 

@@ -54,7 +54,7 @@ claims, deeper macOS host coverage as a primary-lane expansion.
 | VST3 | Loader exists; GPLv3 subprocess boundary must govern any non-experimental claim |
 | AU v2 / 32-bit | Code exists; not in `v0.2.0` operator scope unless matrix forces a deferral |
 | Platform config | Runtime implemented; durable contract still thin |
-| macOS IOSurface preview | Diagnostic-only; disposition on backlog |
+| macOS IOSurface preview | Diagnostic-only; disposition in triage |
 
 Material contradictions resolved recently: isolation-config drift and glob
 matching (`g02.006` task 002). No open architecture-vs-claim gap on the primary
@@ -170,7 +170,7 @@ operator `v0.2.0` = Win + Linux + VST3; `g03` absorbed into `g02`.
    together or a narrowed envelope is explicitly recorded.
 4. **H1 → H2:** AU v2 and incremental format/host depth with contract updates.
 5. **H2 → H3:** 32-bit evidence generation on Win/Linux.
-6. **Parallel:** backlog disposition for macOS IOSurface preview; contract 003
+6. **Parallel:** triage disposition for macOS IOSurface preview; contract 003
    only if VeSTige loader boundary needs stabilization; reopen stabilization
    triage only on real user reports.
 
@@ -185,7 +185,7 @@ operator `v0.2.0` = Win + Linux + VST3; `g03` absorbed into `g02`.
 | Provisional Win/Linux/VST3 expansion plans | `docs/specs/` until promoted |
 | Release envelope and matrix | `docs/releases/` |
 | Evidence and closeout | `docs/logs/` |
-| Deferred IOSurface disposition | `docs/roadmaps/backlog/` |
+| Deferred IOSurface disposition | `docs/triage/` (non-authoritative candidate) |
 
 ## Next Task
 

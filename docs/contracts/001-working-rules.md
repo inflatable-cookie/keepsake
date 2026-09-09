@@ -107,10 +107,9 @@ guardrails and done-ness criteria are only aspirational.
 - Keep one generation active across many tasks until the sequencing baseline itself needs a reset.
 - Treat roughly 20 to 40 tasks as the normal scale of a healthy generation before rollover is even worth discussing.
 - Treat rollover as full generation closeout:
-  - every roadmap in the old generation must be explicitly closed, superseded, or moved to backlog
+  - every roadmap in the old generation must be explicitly closed, superseded, or rehomed (durable rules to their owning contract/architecture surface, deferred candidates to `docs/triage/` as non-authoritative notes)
   - the roadmap front doors must reflect that closed state before the next generation opens
   - stale specs from the closing generation must be archived or removed from `docs/specs/`
-- If those closeout conditions are not satisfied, repair the current generation instead of opening a new one.
 
 ### Stop conditions
 
