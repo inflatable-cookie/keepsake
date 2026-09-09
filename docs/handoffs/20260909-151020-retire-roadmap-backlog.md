@@ -4,7 +4,7 @@ title: "Retire the roadmap backlog in keepsake"
 handoff_mode: worker-pr-loop
 worker_mode: implementation
 dispatch_authority: orchestrator
-status: ready-to-launch
+status: closed
 base_required: pushed-main
 queue_dispatch: northstar-queue
 queue_approval: "The operator authorized Chatterbox on 2026-09-09 to roll out the roadmap-backlog retirement across projects without Orchestrator-owned Paseo threads, using Northstar Queue."
@@ -108,3 +108,18 @@ closeout evidence, and retire only its own cleanup threads/workspace. Final
 report must include the disposition manifest, exact files changed/deleted,
 validation and review evidence, retained historical exceptions, and current
 approved frontier.
+
+## Closeout
+
+Status: closed
+
+PR #4 was merged into `main` at
+`1b582082d6e013b62e6ea698a75638ada7d90bb6` after the accepted exact-head
+review at
+<https://github.com/inflatable-cookie/keepsake/pull/4#issuecomment-5603651479>.
+The merged change is the docs-only Northstar roadmap-backlog retirement
+described above. Its closeout record is
+`docs/logs/2026-09/09-154000-roadmap-backlog-closeout.md`.
+
+The approved next pointer is unchanged: no task is active; define
+`g02.007+` when the operator is ready to spec `v0.2.0`.

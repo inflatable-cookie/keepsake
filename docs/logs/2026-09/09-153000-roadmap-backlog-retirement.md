@@ -3,6 +3,8 @@
 Date: 2026-09-09
 Authority: handoff `docs/handoffs/20260909-151020-retire-roadmap-backlog.md`
 Lane: Northstar roadmap-backlog retirement (one-time docs migration, no product change)
+Status: closed after merge at
+`1b582082d6e013b62e6ea698a75638ada7d90bb6`
 
 ## Disposition manifest
 
@@ -77,3 +79,17 @@ to `../logs/2026-09/09-142635-...`) and re-ran `effigy qa` plus
 
 None active. Define `g02.007+` tasks when the operator is ready to spec
 `v0.2.0`.
+
+## Merge and closeout
+
+PR #4 was merged into `main` at
+`1b582082d6e013b62e6ea698a75638ada7d90bb6` after the accepted independent
+review at
+<https://github.com/inflatable-cookie/keepsake/pull/4#issuecomment-5603651479>.
+The routine closeout record is
+`docs/logs/2026-09/09-154000-roadmap-backlog-closeout.md`.
+
+No validation failure was deferred from this migration. The retained limits
+are planning limits: `g02.007+` remains unauthored and operator-owned, while
+the preview-lane disposition stays deferred in triage and platform-config
+promotion remains an open commitment.

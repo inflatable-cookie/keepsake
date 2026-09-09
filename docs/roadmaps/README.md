@@ -37,6 +37,9 @@ operator will return to spec Windows + Linux + VST3 later.
 The flattened-task switchover is closed after merged PR #3; see
 [`docs/logs/2026-09/09-142635-northstar-flattened-task-closeout.md`](../logs/2026-09/09-142635-northstar-flattened-task-closeout.md).
 
+The roadmap-backlog retirement is closed after merged PR #4; see
+[`docs/logs/2026-09/09-154000-roadmap-backlog-closeout.md`](../logs/2026-09/09-154000-roadmap-backlog-closeout.md).
+
 The brief `g03` rollover was premature and absorbed back into `g02`. See
 `docs/logs/2026-08/17-153800-g03-absorbed-into-g02.md`. `g02.006` closed early
 2026-08-17 — see `docs/logs/2026-08/17-154400-g02-006-early-closeout.md`.
