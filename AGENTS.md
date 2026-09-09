@@ -11,7 +11,7 @@ Inflatable Cookie product, distributed under LGPL v2.1, and is separate from
 Signal and Loophole.
 
 The published `v0.1-alpha` is proven most strongly on macOS + REAPER + VST2.
-Generation `g02` remains active: milestones `001`–`006` are complete, while
+Generation `g02` remains active: tasks `001`–`006` are complete, while
 `g02.007+` (`v0.2.0`, Windows/Linux co-primary with VST3) is operator-owned
 and unauthored. Do not invent that lane or broaden public claims from code
 existence alone.
@@ -35,7 +35,7 @@ existence alone.
   and ownership
 - [`docs/contracts/README.md`](docs/contracts/README.md) — durable boundaries;
   start with [`001-working-rules.md`](docs/contracts/001-working-rules.md)
-- [`docs/roadmaps/README.md`](docs/roadmaps/README.md) — milestones and cards
+- [`docs/roadmaps/README.md`](docs/roadmaps/README.md) — Northstar tasks
 - [`docs/specs/README.md`](docs/specs/README.md) — provisional planning only
 - [`docs/releases/README.md`](docs/releases/README.md) and
   [`docs/setup/README.md`](docs/setup/README.md) — shipped claims and usage

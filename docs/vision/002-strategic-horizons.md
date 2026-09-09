@@ -6,7 +6,7 @@ Updated: 2026-08-17
 Vision refs: `docs/vision/001-keepsake-vision.md`
 
 Atlas-shaped long-horizon runway. This is strategic direction and sequencing,
-not a task queue. Milestones and batch cards live in `docs/roadmaps/`.
+not a task queue. Northstar tasks live in `docs/roadmaps/`.
 
 ## Destination
 
@@ -35,7 +35,7 @@ Recorded operator commitments that shape horizon sequencing:
 | Next primary platforms | **Windows x64 and Linux x64** — co-primary expansion alongside the retained macOS primary lane |
 | Next public envelope | **`v0.2.0`** — the next scope-widening release target (not a indefinite `v0.1.x` patch stream) |
 | VST3 in that push | **Yes** — VST3 support is in scope for `v0.2.0`, subject to subprocess/GPL boundary and matrix proof |
-| Generation posture | **`g02` stays open** — premature `g03` rollover absorbed; `v0.2.0` continues as `g02` milestones |
+| Generation posture | **`g02` stays open** — premature `g03` rollover absorbed; `v0.2.0` continues as `g02` tasks |
 
 Deferred by operator silence (not rejected): AU v2 promotion, 32-bit release
 claims, deeper macOS host coverage as a primary-lane expansion.
@@ -46,7 +46,7 @@ claims, deeper macOS host coverage as a primary-lane expansion.
 |---|---|
 | `v0.1-alpha` | Published; macOS + REAPER + VST2 is the primary validated lane |
 | `g02` | Active — `001`–`006` complete; `007+` (`v0.2.0`) unauthored |
-| `v0.2.0` target | Operator-owned; Win + Linux + VST3 — milestones not yet authored |
+| `v0.2.0` target | Operator-owned; Win + Linux + VST3 — tasks not yet authored |
 | macOS editor | Bridge-owned native window + passive host placeholder (contract 007) |
 | Soundcheck seam | Managed `integrations/keepsake.toml` reader shipped (no live API) |
 | Host capability policy | Contract 008 active; exact macOS process identities for a small host set |
@@ -57,15 +57,15 @@ claims, deeper macOS host coverage as a primary-lane expansion.
 | macOS IOSurface preview | Diagnostic-only; disposition on backlog |
 
 Material contradictions resolved recently: isolation-config drift and glob
-matching (`g02.006` card 002). No open architecture-vs-claim gap on the primary
+matching (`g02.006` task 002). No open architecture-vs-claim gap on the primary
 lane.
 
 ## Horizon Model
 
 ### H0 — Post-alpha stabilization (`g02.006`, closed 2026-08-17)
 
-**Outcome:** Shipped cards 001–002 (Soundcheck reader, isolation drift fix).
-Further triage closed early — no active user base yet.
+**Outcome:** Shipped stabilization fixes (Soundcheck reader, isolation drift
+fix). Further triage closed early — no active user base yet.
 
 **Status:** closed. Resume stabilization only if real reports arrive.
 
@@ -76,7 +76,7 @@ primary platforms alongside macOS, and **VST3** in the supported envelope where
 the validation matrix and license boundary allow. Install, config, and release
 artifacts are credible on all three OS targets.
 
-**Depends on:** operator-authored `g02.007+` milestones; platform config
+**Depends on:** operator-authored `g02.007+` tasks; platform config
 promoted to contract; refreshed validation matrix for Win/Linux hosts and VST3
 paths; explicit acceptance of VST3 GPLv3/subprocess license posture for public
 claims; packaging and install surfaces per platform.
@@ -97,7 +97,7 @@ meaningful validation round — narrow the envelope rather than slip the version
 on macOS, broader VST2/VST3 parity, incremental macOS host capability
 identities — without reopening core platform credibility.
 
-**Depends on:** `v0.2.0` shipped; per-format validation batches; loader ABI
+**Depends on:** `v0.2.0` shipped; per-format validation tasks; loader ABI
 stability (contract 003 if VeSTige boundary drifts).
 
 **Unlocks:** Format parity in factory and scan without special host support.
@@ -159,10 +159,10 @@ tier-2+ work.
 macOS embedded-input cutoff; superseded Soundcheck HTTP integration plan;
 operator `v0.2.0` = Win + Linux + VST3; `g03` absorbed into `g02`.
 
-## Runway (milestone transitions, not cards)
+## Runway (task transitions)
 
-1. **Now:** `g02.006` closed — define **`g02.007+`** when operator specs
-   `v0.2.0`.
+1. **Now:** `g02.006` closed, no active task — define **`g02.007+`** when
+   operator specs `v0.2.0`.
 2. **H1:** promote platform config contract; author Win/Linux packaging,
    validation matrix, VST3 license/claim boundary, per-platform install
    artifacts.
@@ -179,7 +179,7 @@ operator `v0.2.0` = Win + Linux + VST3; `g03` absorbed into `g02`.
 | Content | Destination |
 |---|---|
 | Long-horizon outcomes (this doc) | `docs/vision/` — here |
-| `v0.2.0` milestones and batch cards | `docs/roadmaps/g02/` (`007+`) |
+| `v0.2.0` tasks | `docs/roadmaps/g02/` (`007+`) |
 | System shape updates | `docs/architecture/` |
 | Durable authority (config schema, VST3 license boundary) | `docs/contracts/` |
 | Provisional Win/Linux/VST3 expansion plans | `docs/specs/` until promoted |
@@ -189,5 +189,5 @@ operator `v0.2.0` = Win + Linux + VST3; `g03` absorbed into `g02`.
 
 ## Next Task
 
-Define `g02.007+` milestone sequencing for `v0.2.0` when the operator is ready
-to spec that lane.
+Define `g02.007+` task sequencing for `v0.2.0` when the operator is ready
+to spec that lane; no task is active until then.

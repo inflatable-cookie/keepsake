@@ -61,7 +61,7 @@ Promote this only when one of the following becomes true:
 
 - the preview lane starts causing real maintenance drag or regressions
 - release work is sufficiently complete that cleanup becomes the highest-value
-  batch
+  task
 - a maintainer explicitly wants a smaller, clearer macOS GUI surface before or
   after alpha publication
 

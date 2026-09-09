@@ -1,7 +1,7 @@
 # Roadmaps
 
-Roadmaps are executable milestone plans derived from vision, architecture, and
-contracts.
+Roadmaps are executable Northstar tasks derived from vision, architecture,
+and contracts.
 
 ## Active Generation
 
@@ -14,28 +14,31 @@ contracts.
 
 ## Layout
 
-- `gNN/batch-cards/` optional per-generation execution cards
-- `g01/` — first generation milestones
+- `gNN/NNN-<slug>.md` — the sole executable planning unit, one top-level
+  Northstar task per `gNN.NNN`
 - `g02/` — alpha release, stabilization, and `v0.2.0` stream
+- `archive/gNN.md` — non-procedural roll-ups for compacted generations
 - `generation-index.md` — active generation and rollover history
 - `backlog/` — deferred items with promotion criteria
-- `templates/roadmap-milestone-template.md` — milestone starter contract
+- `templates/task-template.md` — task starter contract
 
 ## Status
 
-**g01 sequencing intent met.** The core bridge, GUI, scan robustness, CI, and
-codebase-health lanes are complete.
+**g01 sequencing intent met and compacted.** The core bridge, GUI, scan
+robustness, CI, and codebase-health lanes are complete — see
+[`archive/g01.md`](archive/g01.md).
 
-**g02 is active.** Milestones `001`–`006` complete. **`007+`** (`v0.2.0`) is
-unauthored — operator will return to spec Windows + Linux + VST3 later.
+**g02 is active.** Tasks `001`–`006` complete (outcomes collapsed into
+[`g02/README.md`](g02/README.md)). **`007+`** (`v0.2.0`) is unauthored —
+operator will return to spec Windows + Linux + VST3 later.
 
 The brief `g03` rollover was premature and absorbed back into `g02`. See
 `docs/logs/2026-08/17-153800-g03-absorbed-into-g02.md`. `g02.006` closed early
 2026-08-17 — see `docs/logs/2026-08/17-154400-g02-006-early-closeout.md`.
 
-## Batch and Logging Rule
+## Task and Logging Rule
 
-- Execute milestones in meaningful batches.
+- Execute tasks in meaningful batches.
 - Create logs per completed batch or update cycle, not per individual task.
 - Stop execution when a batch reveals a missing contract, missing repo
   authority, or other planning gap.
@@ -52,4 +55,4 @@ Before rollover:
 
 ## Next Task
 
-Define `g02.007+` milestones when ready to spec `v0.2.0`.
+None active. Define `g02.007+` tasks when ready to spec `v0.2.0`.

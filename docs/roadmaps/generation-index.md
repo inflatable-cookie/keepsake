@@ -21,7 +21,7 @@ Operator-owned target — **`g02.007+`** for `v0.2.0`:
 
 - **`v0.2.0`** — Windows x64 + Linux x64 as co-primary platforms, VST3 in the
   supported envelope, refreshed validation matrix, and per-platform install
-  artifacts — as further `g02` milestones (not a new generation).
+  artifacts — as further `g02` tasks (not a new generation).
 
 See `docs/vision/002-strategic-horizons.md`.
 
@@ -41,4 +41,4 @@ If that cleanup has not happened, stay in the current generation and finish the 
 
 ## Next task
 
-Define `g02.007+` milestones when ready to spec `v0.2.0`.
+None active. Define `g02.007+` tasks when ready to spec `v0.2.0`.

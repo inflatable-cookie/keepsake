@@ -20,7 +20,7 @@ guardrails and done-ness criteria are only aspirational.
 ### Delivery grammar
 
 - Material work should follow this chain:
-  `vision -> research/specs -> architecture + contracts -> roadmap milestone -> execution -> evidence -> closeout`.
+  `vision -> research/specs -> architecture + contracts -> Northstar task (gNN.NNN) -> execution -> evidence -> closeout`.
 - Use separate contracts for stable seams, important boundaries, or durable
   rules that need their own authority surface.
 - Use specs only while shaping material changes; promote durable outcomes into
@@ -28,21 +28,21 @@ guardrails and done-ness criteria are only aspirational.
 - Once those outcomes are promoted, treat specs as provisional planning history
   rather than canonical authority; keep, archive, or remove them based on
   whether they still help the active lane.
-- A ready batch card should define scope, steps, governing refs, acceptance
-  criteria, evidence requirements, stop conditions, and whether
+- A ready Northstar task should define outcome, scope, steps, governing refs,
+  acceptance criteria, evidence requirements, stop conditions, and whether
   auto-continuation is allowed.
 - In a strict lane, a bare `continue` should resolve through the previous
-  closeout's `Next Task`, which should normally point at the current ready card
-  or an explicit stop/reassessment step.
+  closeout's `Next Task`, which should normally point at the current ready
+  task or an explicit stop/reassessment step.
 
 ### Intent checkpoints
 
 - When planning is needed and the next direction is not clearly determined by
   the current authority surfaces, stop and ask the operator for intent instead
   of inventing the next lane or batch.
-- Treat competing plausible directions, milestone handoff choices, and still-open
+- Treat competing plausible directions, task handoff choices, and still-open
   product tradeoffs as intent checkpoints rather than routine planning work.
-- Do not mark a card `ready` while an unresolved intent checkpoint still
+- Do not mark a task `ready` while an unresolved intent checkpoint still
   governs its scope.
 
 ### Legal guardrail (hard stop)
@@ -59,11 +59,11 @@ guardrails and done-ness criteria are only aspirational.
   scaffolding
 - prefer simplicity over decorative or architectural complexity that the
   governing refs do not require
-- prefer end-to-end follow-through over convenient partial closure when a batch
+- prefer end-to-end follow-through over convenient partial closure when a task
   promised a working path
 - prefer explicit incompleteness over implied completion when a path is still
   scaffolded or unproven
-- treat disconnected gesture work as incomplete unless the batch was explicitly
+- treat disconnected gesture work as incomplete unless the task was explicitly
   scoped as bounded substrate-only work
 
 ### Definition of done
@@ -72,7 +72,7 @@ guardrails and done-ness criteria are only aspirational.
   token implementation.
 - Update dependent refs, roadmap state, and logs so they match reality.
 - Update any front-door or currentness surfaces that still name the active
-  lane, current ready card, or recent evidence chain so they do not keep
+  lane, current ready task, or recent evidence chain so they do not keep
   advertising stale authority after closeout.
 - Run the required validation commands and record them in a log.
 - Name unresolved blockers or limits explicitly instead of hiding them inside a
@@ -81,12 +81,12 @@ guardrails and done-ness criteria are only aspirational.
 
 ### Execution autonomy
 
-- Agents may continue across consecutive ready batch cards without waiting for
+- Agents may continue across consecutive ready tasks without waiting for
   a manual prompt.
-- Auto-continuation is allowed only when the cards stay inside the same active
-  lane, the governing refs still match, and the prior card's evidence gate
+- Auto-continuation is allowed only when the tasks stay inside the same active
+  lane, the governing refs still match, and the prior task's evidence gate
   passed.
-- Set a local upper bound for uninterrupted runs, such as a card limit or time
+- Set a local upper bound for uninterrupted runs, such as a task limit or time
   limit, so autonomy remains bounded.
 
 ### Automation runtime policy
@@ -104,12 +104,12 @@ guardrails and done-ness criteria are only aspirational.
 ### Generation posture
 
 - Treat roadmap generations as substantial sequencing eras, not one-or-two-file buckets.
-- Keep one generation active across many milestones until the sequencing baseline itself needs a reset.
-- Treat roughly 20 to 40 milestones as the normal scale of a healthy generation before rollover is even worth discussing.
+- Keep one generation active across many tasks until the sequencing baseline itself needs a reset.
+- Treat roughly 20 to 40 tasks as the normal scale of a healthy generation before rollover is even worth discussing.
 - Treat rollover as full generation closeout:
   - every roadmap in the old generation must be explicitly closed, superseded, or moved to backlog
   - the roadmap front doors must reflect that closed state before the next generation opens
-  - stale specs and batch cards from the closing generation must be archived or removed from `docs/specs/`
+  - stale specs from the closing generation must be archived or removed from `docs/specs/`
 - If those closeout conditions are not satisfied, repair the current generation instead of opening a new one.
 
 ### Stop conditions
@@ -119,7 +119,7 @@ guardrails and done-ness criteria are only aspirational.
   multiple plausible planning directions
 - stop when user-facing ambiguity exceeds the project guardrails
 - stop when validation fails in a way that changes the plan
-- stop when the current card is complete and the next one is not already ready
+- stop when the current task is complete and the next one is not already ready
 - stop (hard) when any path would violate the legal guardrails above
 
 ### Currentness surfaces
@@ -129,13 +129,13 @@ guardrails and done-ness criteria are only aspirational.
   - `docs/contracts/contract-index.md`
   - `docs/roadmaps/README.md`
   - `docs/roadmaps/generation-index.md`
-  - `docs/roadmaps/g01/README.md` (current generation)
+  - `docs/roadmaps/g02/README.md` (active generation)
   - `docs/specs/README.md` when specs are part of the lane
   - `docs/logs/README.md`
-- When a card closes, those surfaces must either:
-  - point at the next ready card or active milestone state
+- When a task closes, those surfaces must either:
+  - point at the next ready task or explicit absence of one
   - or explicitly say the lane is awaiting reassessment
-- Do not leave a completed card named as the current ready card after closeout.
+- Do not leave a completed task named as the current ready task after closeout.
 
 ## Validation
 
@@ -144,7 +144,7 @@ guardrails and done-ness criteria are only aspirational.
 
 ## Roadmap Impact
 
-- All milestones in g01 and beyond
+- All tasks in g01 and beyond
 
 ## Planning Notes
 
@@ -155,5 +155,6 @@ and agent sessions are used for implementation work.
 
 ## Next Task
 
-Define `g02.007+` milestones for `v0.2.0` when the operator is ready to spec
-that lane; promote the platform config boundary before execution relies on it.
+None active. Define `g02.007+` tasks for `v0.2.0` when the operator is ready
+to spec that lane; promote the platform config boundary before execution
+relies on it.
