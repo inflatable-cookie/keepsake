@@ -1,7 +1,10 @@
 # Roadmaps
 
 Roadmaps are executable Northstar tasks derived from vision, architecture,
-and contracts.
+and contracts. Roadmaps contain only promoted executable work: the sole
+executable planning unit is a top-level Northstar task at `gNN/NNN-<slug>.md`.
+Unresolved or deferred candidates live non-authoritatively in `docs/triage/`
+until promotion; there is no roadmap backlog.
 
 ## Active Generation
 
@@ -19,7 +22,6 @@ and contracts.
 - `g02/` — alpha release, stabilization, and `v0.2.0` stream
 - `archive/gNN.md` — non-procedural roll-ups for compacted generations
 - `generation-index.md` — active generation and rollover history
-- `backlog/` — deferred items with promotion criteria
 - `templates/task-template.md` — task starter contract
 
 ## Status
@@ -51,8 +53,9 @@ The brief `g03` rollover was premature and absorbed back into `g02`. See
 Do not open `gNN+1` while the current generation still has live roadmap files or stale strict-lane debris in the active specs tree.
 
 Before rollover:
-
-- every roadmap in the closing generation must be explicitly closed, paused, superseded, or moved to backlog
+- every roadmap in the closing generation must be explicitly closed, paused,
+  superseded, or rehomed (durable rules to their owning contract/architecture
+  surface, deferred candidates to `docs/triage/`)
 - the roadmap front doors must agree that the old generation is no longer the live queue
 - `docs/specs/` must be purged so only live or near-live planning artifacts remain in the active tree
 
