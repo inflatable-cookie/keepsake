@@ -4,7 +4,7 @@ title: "Flatten Northstar tasks and compact historic generations in keepsake"
 handoff_mode: worker-pr-loop
 worker_mode: implementation
 dispatch_authority: orchestrator
-status: ready-to-launch
+status: closed
 base_required: pushed-main
 queue_dispatch: northstar-queue
 queue_approval: "The operator authorized Chatterbox on 2026-09-09 to orchestrate the flattened-task migration across projects without Orchestrator-tagged Paseo threads, and explicitly required Northstar Queue for dispatch."
@@ -118,3 +118,18 @@ retire only the queue-owned migration threads/workspace. Final report must give
 historic classifications, preservation manifest, old-to-new mapping, exact
 changes, validation/review evidence, retained exceptions, new frontier, and
 whether normal dispatch resumed.
+
+## Closeout
+
+Status: closed
+
+PR #3 was merged into `main` at
+`ee834e722fe5cffbda54426e7ec9c23c187f829c` after the accepted exact-head
+review at
+<https://github.com/inflatable-cookie/keepsake/pull/3#issuecomment-5602528248>.
+The merged change is the docs-only Northstar flattened-task switchover
+described above. Its closeout record is
+`docs/logs/2026-09/09-142635-northstar-flattened-task-closeout.md`.
+
+The approved next pointer is unchanged: no task is active; define
+`g02.007+` when the operator is ready to spec `v0.2.0`.

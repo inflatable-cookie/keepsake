@@ -5,6 +5,8 @@ Lane: docs-only Northstar migration (worker-PR loop
 `d3be99f6-7285-44f6-a8bd-66f8c1ab2bc5`)
 Planning: `docs/handoffs/20260909-140500-flattened-task-switchover.md`
 against Northstar planning `a30824ba2c0598f997aef0555d4afd9c12006123`
+Status: closed after merge at
+`ee834e722fe5cffbda54426e7ec9c23c187f829c`
 
 ## Outcome
 
@@ -105,3 +107,17 @@ noted inline) was required to keep `effigy docs check links` green.
 
 None active. Define `g02.007+` tasks when the operator is ready to spec
 `v0.2.0`.
+
+## Merge and closeout
+
+PR #3 was merged into `main` at
+`ee834e722fe5cffbda54426e7ec9c23c187f829c` after the accepted independent
+review at
+<https://github.com/inflatable-cookie/keepsake/pull/3#issuecomment-5602528248>.
+The routine closeout record is
+`docs/logs/2026-09/09-142635-northstar-flattened-task-closeout.md`.
+
+No validation failure was deferred from this migration. The retained limits
+are planning limits: `g02.007+` remains unauthored and operator-owned, while
+the preview-lane disposition and platform-config promotion remain on their
+existing active surfaces.

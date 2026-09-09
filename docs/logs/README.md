@@ -14,6 +14,7 @@ Logs capture dated evidence and assessments.
 
 ## Recent Evidence
 
+- [`2026-09/09-142635-northstar-flattened-task-closeout.md`](2026-09/09-142635-northstar-flattened-task-closeout.md) — closeout for merged PR #3, accepted exact-head review, validation, and retained planning limits
 - [`2026-09/09-141336-northstar-flattened-task-switchover.md`](2026-09/09-141336-northstar-flattened-task-switchover.md) — flattened Northstar tasks (one execution level), compacted g01 into `docs/roadmaps/archive/g01.md`, collapsed g02.001–006 and both batch cards into the g02 README frontier
 - [`2026-08/17-154400-g02-006-early-closeout.md`](2026-08/17-154400-g02-006-early-closeout.md) — operator closed `g02.006` early; no active users yet; `007+` deferred — premature `g03` rollover reversed; post-alpha work lives in `g02.006`; `v0.2.0` continues as `g02.007+`
 - [`2026-08/17-153400-operator-v0.2.0-direction.md`](2026-08/17-153400-operator-v0.2.0-direction.md)
