@@ -1,6 +1,5 @@
 # G02 — Alpha Release and Post-Alpha Stream
 
-Status: active
 Started: 2026-04-12
 Reopened: 2026-08-17
 
@@ -102,8 +101,8 @@ this lane later.
 
 ## Next task
 
-None active. Define `g02.007+` tasks when the operator is ready to spec
-`v0.2.0`.
+None active. Define the next `v0.2.0` tasks when the operator is ready to
+spec that lane.
 <!-- northstar:lifecycle:begin schema=northstar.lifecycle.projection.v2 digest=sha256:3afaa272efaaea1b0823cf0429762fd63ff3fd6ff9d9965efc0b528930c1e802 -->
 | Generation | Disposition | Runway state |
 | --- | --- | --- |

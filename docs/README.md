@@ -65,7 +65,7 @@ Long-horizon direction lives in
 
 ## Next Task
 
-None active. Define `g02.007+` tasks when ready to spec `v0.2.0`.
+None active. Define the next `v0.2.0` tasks when ready to spec that lane.
 <!-- northstar:lifecycle:begin schema=northstar.lifecycle.projection.v2 digest=sha256:3afaa272efaaea1b0823cf0429762fd63ff3fd6ff9d9965efc0b528930c1e802 -->
 | Generation | Disposition | Runway state |
 | --- | --- | --- |
