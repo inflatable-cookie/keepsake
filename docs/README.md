@@ -66,3 +66,11 @@ Long-horizon direction lives in
 ## Next Task
 
 None active. Define `g02.007+` tasks when ready to spec `v0.2.0`.
+<!-- northstar:lifecycle:begin schema=northstar.lifecycle.projection.v2 digest=sha256:3afaa272efaaea1b0823cf0429762fd63ff3fd6ff9d9965efc0b528930c1e802 -->
+| Generation | Disposition | Runway state |
+| --- | --- | --- |
+| g02 | open | planning_required |
+| Task | Status | Stage | Revision | Record digest |
+| --- | --- | --- | --- | --- |
+| g02.007 | complete | none | 8 | sha256:1143c63d8410a90d180b91b0b9a1273f5508a1b078ae79055003b9cc128674c9 |
+<!-- northstar:lifecycle:end -->
