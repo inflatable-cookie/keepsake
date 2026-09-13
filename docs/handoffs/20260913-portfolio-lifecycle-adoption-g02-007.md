@@ -43,6 +43,12 @@ Follow the task's owned paths, acceptance oracle, and stop conditions exactly.
 Do not modify product code, existing product runway decisions, Queue or Effigy
 source, CI/release surfaces, or any Paseo thread/workspace.
 
+## Important Context
+
+The Queue origin identifies the planning thread that should receive a genuine
+escalation. It is not a dispatch or completion notification target. Existing
+workers and coordinators retain their own Queue callbacks and evidence.
+
 ## Suggested Next Move
 
 Create a worker branch from the pinned synchronized main, add the exact portable
