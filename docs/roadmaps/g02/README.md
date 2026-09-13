@@ -92,6 +92,14 @@ this lane later.
 - Platform config schema promotion before `v0.2.0` execution relies on
   it (see the contract index).
 
+## Queue lifecycle adoption
+
+- [g02.007 Effigy-hosted lifecycle hook](007-adopt-effigy-hosted-lifecycle-hook.md)
+  is an operator-approved, configuration-only maintenance lane. It follows its
+  declared Queue dependencies and may run without changing product priority.
+  Existing next-task text continues to describe product sequencing; this entry
+  authorizes no sibling product work.
+
 ## Next task
 
 None active. Define `g02.007+` tasks when the operator is ready to spec
