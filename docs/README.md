@@ -66,11 +66,12 @@ Long-horizon direction lives in
 ## Next Task
 
 None active. Define the next `v0.2.0` tasks when ready to spec that lane.
-<!-- northstar:lifecycle:begin schema=northstar.lifecycle.projection.v2 digest=sha256:3afaa272efaaea1b0823cf0429762fd63ff3fd6ff9d9965efc0b528930c1e802 -->
+<!-- northstar:lifecycle:begin schema=northstar.lifecycle.projection.v2 digest=sha256:e37f1c0a47ef6357ba4f37096e758ed531c3fd529ebbd60c5a63c5f1a719838c -->
 | Generation | Disposition | Runway state |
 | --- | --- | --- |
 | g02 | open | planning_required |
 | Task | Status | Stage | Revision | Record digest |
 | --- | --- | --- | --- | --- |
 | g02.007 | complete | none | 8 | sha256:1143c63d8410a90d180b91b0b9a1273f5508a1b078ae79055003b9cc128674c9 |
+| g02.008 | complete | none | 8 | sha256:6fe7e357f50fbd0a98a52dc5de323d54f865502583dad813dc7d3eb0e1042559 |
 <!-- northstar:lifecycle:end -->
