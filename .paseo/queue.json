@@ -1,38 +1,87 @@
 {
-  "schema": "paseo.queue.control.v2",
+  "schema": "paseo.queue.control.v3",
   "hooks": [
     {
       "id": "lifecycle-gate",
-      "events": ["task.pre_dispatch"],
+      "events": [
+        "task.pre_dispatch"
+      ],
       "mode": "read_only",
       "delivery": "required",
       "program": {
         "kind": "trusted_runner",
         "runner": "effigy",
-        "argv": ["skill", "run", "northstar/queue:hook", "--stdio", "passthrough"]
+        "argv": [
+          "skill",
+          "run",
+          "northstar/queue:hook",
+          "--stdio",
+          "passthrough"
+        ]
       },
       "timeoutMs": 30000,
       "maxOutputBytes": 65536,
       "allowedPaths": [],
-      "commitSubject": null
+      "commitSubject": null,
+      "target": "integration_base"
+    },
+    {
+      "id": "repository-pre-merge",
+      "events": [
+        "task.pre_merge"
+      ],
+      "mode": "read_only",
+      "delivery": "required",
+      "program": {
+        "kind": "trusted_runner",
+        "runner": "effigy",
+        "argv": [
+          "skill",
+          "run",
+          "northstar/queue:hook",
+          "--stdio",
+          "passthrough"
+        ]
+      },
+      "timeoutMs": 30000,
+      "maxOutputBytes": 65536,
+      "allowedPaths": [],
+      "commitSubject": null,
+      "target": "reviewed_head"
     },
     {
       "id": "lifecycle-state",
-      "events": ["task.blocked", "task.cancelled", "task.closeout"],
+      "events": [
+        "task.blocked",
+        "task.cancelled",
+        "task.closeout"
+      ],
       "mode": "integration_write",
       "delivery": "required",
       "program": {
         "kind": "trusted_runner",
         "runner": "effigy",
-        "argv": ["skill", "run", "northstar/queue:hook", "--stdio", "passthrough"]
+        "argv": [
+          "skill",
+          "run",
+          "northstar/queue:hook",
+          "--stdio",
+          "passthrough"
+        ]
       },
       "timeoutMs": 30000,
       "maxOutputBytes": 65536,
-      "allowedPaths": [".northstar/lifecycle/", "docs/roadmaps/", "docs/handoffs/", "docs/README.md"],
+      "allowedPaths": [
+        ".northstar/lifecycle/",
+        "docs/roadmaps/",
+        "docs/handoffs/",
+        "docs/README.md"
+      ],
       "commitSubject": {
         "prefix": "lifecycle",
         "maxBytes": 100
-      }
+      },
+      "target": "integration_base"
     }
   ]
 }
