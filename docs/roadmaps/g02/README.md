@@ -99,6 +99,10 @@ this lane later.
   Existing next-task text continues to describe product sequencing; this entry
   authorizes no sibling product work.
 
+- [g02.009 prospective-merge protocol migration](009-prospective-merge-protocol-migration.md)
+  owns the operator-authorized v4 manifest update. It is configuration-only,
+  independent of product priority, and changes no product behavior.
+
 ## Next task
 
 None active. Define the next `v0.2.0` tasks when the operator is ready to
