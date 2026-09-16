@@ -1,5 +1,5 @@
 {
-  "schema": "paseo.queue.control.v3",
+  "schema": "paseo.queue.control.v4",
   "hooks": [
     {
       "id": "lifecycle-gate",
@@ -47,7 +47,7 @@
       "maxOutputBytes": 65536,
       "allowedPaths": [],
       "commitSubject": null,
-      "target": "reviewed_head"
+      "target": "prospective_merge"
     },
     {
       "id": "lifecycle-state",
