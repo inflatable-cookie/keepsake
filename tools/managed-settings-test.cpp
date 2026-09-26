@@ -8,7 +8,6 @@
 //
 // Refs:
 //   ../soundcheck/docs/contracts/002-companion-api-and-keepsake-integration-contract.md
-//   docs/roadmaps/g03/batch-cards/001-g03-soundcheck-managed-settings-reader.md
 //
 
 #include "bridge_pool.h"

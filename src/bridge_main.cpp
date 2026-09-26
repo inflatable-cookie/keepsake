@@ -3,8 +3,8 @@
 // Hosts one or more plugin instances, dispatched by instance ID.
 //
 // Contract refs:
-//   docs/contracts/004-ipc-bridge-protocol.md
-//   docs/contracts/006-process-isolation-policy.md
+//   docs/knowledge/contracts/ipc-bridge-protocol.md
+//   docs/knowledge/contracts/process-isolation-policy.md
 //
 
 #include "ipc.h"

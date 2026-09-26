@@ -112,9 +112,3 @@ If a release claim conflicts with this file, either:
 2. narrow the claim
 
 Do not publish around unresolved ambiguity.
-
-## Next Task
-
-Use this file as the post-release claim boundary for `v0.1-alpha`: correct the
-docs when evidence improves, but do not silently widen support claims without
-updating the release surface.

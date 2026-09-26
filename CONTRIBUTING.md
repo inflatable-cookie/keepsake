@@ -124,10 +124,10 @@ PRs for experimental platforms (Windows, Linux) that include real-host validatio
 
 If you're doing anything beyond a targeted bug fix, read these first:
 
-- [`docs/architecture/system-architecture.md`](docs/architecture/system-architecture.md) — component layout and seams
-- [`docs/architecture/product-guardrails.md`](docs/architecture/product-guardrails.md) — things Keepsake deliberately doesn't do
-- [`docs/contracts/002-clap-factory-interface.md`](docs/contracts/002-clap-factory-interface.md) — the CLAP factory contract
-- [`docs/contracts/004-ipc-bridge-protocol.md`](docs/contracts/004-ipc-bridge-protocol.md) — IPC message protocol
-- [`docs/contracts/006-process-isolation-policy.md`](docs/contracts/006-process-isolation-policy.md) — isolation modes and crash policy
+- [`docs/knowledge/architecture/system.md`](docs/knowledge/architecture/system.md) — component layout and seams
+- [`docs/knowledge/contracts/legal-boundaries.md`](docs/knowledge/contracts/legal-boundaries.md) — legal, licence and trademark boundaries
+- [`docs/knowledge/contracts/clap-factory-interface.md`](docs/knowledge/contracts/clap-factory-interface.md) — the CLAP factory contract
+- [`docs/knowledge/contracts/ipc-bridge-protocol.md`](docs/knowledge/contracts/ipc-bridge-protocol.md) — IPC message protocol
+- [`docs/knowledge/contracts/process-isolation-policy.md`](docs/knowledge/contracts/process-isolation-policy.md) — isolation modes and crash policy
 
 These are the authoritative references for the project's design decisions. If your change conflicts with something in them, note that in your PR — it may be a design tradeoff worth discussing rather than something to paper over.

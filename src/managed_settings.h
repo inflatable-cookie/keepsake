@@ -9,7 +9,7 @@
 // must work unchanged when Soundcheck is closed or never installed.
 //
 // Contract refs:
-//   docs/contracts/006-process-isolation-policy.md
+//   docs/knowledge/contracts/process-isolation-policy.md
 //   ../soundcheck/docs/contracts/002-companion-api-and-keepsake-integration-contract.md
 //
 

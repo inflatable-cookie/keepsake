@@ -2,7 +2,7 @@
 //
 // Keepsake IPC — protocol constants, pipe I/O, and shared memory helpers.
 // Shared between the main plugin and the bridge subprocess.
-// Contract ref: docs/contracts/004-ipc-bridge-protocol.md
+// Contract ref: docs/knowledge/contracts/ipc-bridge-protocol.md
 //
 
 #include <cstdint>

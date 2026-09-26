@@ -25,7 +25,7 @@ struct KnownHost {
 
 // These entries describe verified runtime process identities, not the full
 // product capability matrix. Keep the product-level research in
-// docs/architecture/native-vst2-host-capabilities.md. Scanner and helper
+// docs/knowledge/architecture/native-vst2-host-capabilities.md. Scanner and helper
 // bundle IDs are required because DAWs may enumerate CLAP descriptors outside
 // their main application process.
 constexpr KnownHost kKnownHosts[] = {

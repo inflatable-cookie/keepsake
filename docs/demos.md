@@ -45,8 +45,3 @@ This lane is intentionally not part of the supported normal posture.
   preview-path investigation.
 - Do not treat the repo fixture demos as a substitute for real-host REAPER
   validation on the published lane.
-
-## Next Task
-
-Keep this list tight. If another supported demo gets added, decide whether it
-belongs in `demo:supported-proof` or should stay opt-in.

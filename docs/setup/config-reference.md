@@ -129,7 +129,7 @@ This is a fallback for hosts whose capabilities Keepsake does not know. When
 the current host or its plug-in scanner is known to support native VST2,
 Keepsake suppresses same-architecture VST2 descriptors even if this setting is
 `true`. Bridge-required Intel or 32-bit VST2 descriptors remain exposed. See
-the dated [host capability matrix](../architecture/native-vst2-host-capabilities.md)
+the dated [host capability matrix](../knowledge/architecture/native-vst2-host-capabilities.md)
 for product evidence and activated runtime identities.
 
 Expose VST2 plugins that can be loaded natively (same architecture as the host). Off by default because CLAP hosts that support VST2 natively may already load these; bridging them adds overhead without benefit unless you specifically want crash isolation.
