@@ -56,6 +56,7 @@ keepsake-bridge-32 (32-bit helper, where the platform supports it)
 | Scan path config | config and cache files per platform | Runtime implemented; schema documented in [config-reference.md](../../setup/config-reference.md). |
 | Host capability policy | product matrix + exact runtime identity | Suppresses same-architecture VST2 descriptors only in positively identified CLAP hosts that already support VST2. Governed by [native-vst2-host-capability-policy.md](../contracts/native-vst2-host-capability-policy.md). |
 | macOS editor posture | Passive host placeholder plus bridge-owned native editor window | Every normal CLAP host gets the same Cocoa parent view; rendering and input stay in the native window. Governed by [macos-native-editor-and-host-placeholder.md](../contracts/macos-native-editor-and-host-placeholder.md). |
+| Windows editor posture | Deferred staged embedded open with a bridge-owned Win32 surface | The host never waits synchronously on bridge-side editor open. See [windows-editor.md](windows-editor.md). |
 
 ## Platform notes
 

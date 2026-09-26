@@ -7,6 +7,7 @@ Every topic has exactly one owning file. Link to it; don't restate it.
 | What Keepsake is for, and what it is not | [vision.md](vision.md) |
 | System shape, components, seams and ownership | [architecture/system.md](architecture/system.md) |
 | macOS editor architecture and its decision history | [architecture/macos-editor.md](architecture/macos-editor.md) |
+| Windows embedded VST2 editor architecture | [architecture/windows-editor.md](architecture/windows-editor.md) |
 | Host support for native VST2 (dated matrix) | [architecture/native-vst2-host-capabilities.md](architecture/native-vst2-host-capabilities.md) |
 | Delivery grammar, guardrails, done-ness and stop conditions | [contracts/working-rules.md](contracts/working-rules.md) |
 | Legal, licence and trademark boundaries | [contracts/legal-boundaries.md](contracts/legal-boundaries.md) |

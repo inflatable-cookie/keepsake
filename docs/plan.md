@@ -12,8 +12,9 @@ Updated: 2026-09-26
    VST3 together, or a narrowed envelope is recorded. The VST3 GPLv3 subprocess
    boundary must be accepted explicitly before any public VST3 claim. Open
    questions: Q-003, Q-004. See
-   [vision](knowledge/vision.md) and
-   [architecture](knowledge/architecture/system.md).
+   [vision](knowledge/vision.md),
+   [architecture](knowledge/architecture/system.md) and the
+   [Windows editor architecture](knowledge/architecture/windows-editor.md).
 
 ## Next
 
@@ -22,9 +23,6 @@ Updated: 2026-09-26
   [config reference](setup/config-reference.md) and the
   [isolation policy](knowledge/contracts/process-isolation-policy.md). Do this
   before `v0.2.0` work relies on it.
-- **Sweep the removed records for surviving rulings** — the retired roadmaps,
-  handoffs and logs have not been read line by line. Any ruling or procedure
-  that lives only there moves into its owning knowledge file.
 
 ## Not now
 

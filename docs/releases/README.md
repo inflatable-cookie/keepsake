@@ -9,5 +9,8 @@ prepared and published is owned by
 | --- | --- | --- |
 | `v0.1-alpha` | [v0.1-alpha.md](v0.1-alpha.md) | [v0.1-alpha-validation-matrix.md](v0.1-alpha-validation-matrix.md) |
 
+The completed `v0.1-alpha` publication gate is kept as a frozen record at
+[v0.1-alpha-publish-checklist.md](v0.1-alpha-publish-checklist.md).
+
 The current alpha support posture and caveats are in
 [../known-issues-v0.1-alpha.md](../known-issues-v0.1-alpha.md).
