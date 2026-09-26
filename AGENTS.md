@@ -15,9 +15,8 @@ being a CLAP plugin.
 - What's next: `docs/plan.md`
 - Unresolved leads: `docs/triage/`
 - Install and build guides: `docs/setup/README.md`
-- Tool and process friction: `PAPERCUTS.md`
 
-Tasks, briefs and status live in Queue, never in this repository.
+Tasks, briefs, status and papercuts live in Queue, never in this repository.
 
 ## Commands
 
@@ -62,6 +61,11 @@ Prefer `effigy <selector>` over raw tools when it covers the operation. Use
   thread ends.
 - Write in `docs/knowledge/contracts/writing-style.md`: short, blunt, high
   signal.
+
+## Papercuts
+
+File small, recurring friction in Queue with `papercut.add` (see the
+`northstar-lean` skill). There is no `PAPERCUTS.md`.
 
 ## Validate
 

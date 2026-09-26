@@ -10,3 +10,12 @@ terms = ["roadmap card", "generation index", "northstar:lifecycle", "chatterbox 
 paths = [".northstar/lifecycle/", "docs/roadmaps/", "docs/handoffs/", "docs/logs/"]
 config_keys = ["northstar/queue:hook", "paseo.queue.control.v4"]
 allow = ["CHANGELOG.md", "docs/releases/v0.1-alpha.md", "docs/releases/v0.1-alpha-validation-matrix.md", "docs/releases/v0.1-alpha-publish-checklist.md"]
+
+[[retired]]
+id = "papercuts-file"
+retired = "2026-09-26"
+replacement = "Queue papercuts"
+owner = "AGENTS.md"
+terms = ["PAPERCUTS.md"]
+paths = ["PAPERCUTS.md"]
+allow = ["CHANGELOG.md", "docs/knowledge/contracts/working-rules.md"]
