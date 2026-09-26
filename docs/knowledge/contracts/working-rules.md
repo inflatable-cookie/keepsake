@@ -21,7 +21,7 @@ all execution work in this repository.
   scaffolded or unproven.
 - Treat disconnected gesture work as incomplete unless the task was explicitly
   scoped as bounded substrate-only work.
-- File papercuts in Queue with `papercut.add` (see the `northstar-lean` skill).
+- File papercuts in Queue with `papercut.add` (see the `northstar` skill).
   There is no `PAPERCUTS.md`.
 
 ## Intent checkpoints

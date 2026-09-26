@@ -1,5 +1,5 @@
 # Concepts that no longer exist. Run the check with
-# `effigy skill run northstar-lean/retired-concepts`.
+# `effigy skill run northstar/retired-concepts`.
 
 [[retired]]
 id = "northstar-process-records"

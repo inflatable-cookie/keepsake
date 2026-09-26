@@ -65,7 +65,7 @@ Prefer `effigy <selector>` over raw tools when it covers the operation. Use
 ## Papercuts
 
 File small, recurring friction in Queue with `papercut.add` (see the
-`northstar-lean` skill). There is no `PAPERCUTS.md`.
+`northstar` skill). There is no `PAPERCUTS.md`.
 
 ## Validate
 
