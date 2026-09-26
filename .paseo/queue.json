@@ -1,5 +1,0 @@
-{
-  "schema": "paseo.queue.control.v5",
-  "closeout": "queue",
-  "hooks": []
-}
