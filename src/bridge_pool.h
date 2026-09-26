@@ -3,7 +3,7 @@
 // BridgePool — manages bridge subprocess processes and routes plugin
 // instances to the appropriate process based on isolation policy.
 //
-// Contract ref: docs/contracts/006-process-isolation-policy.md
+// Contract ref: docs/knowledge/contracts/process-isolation-policy.md
 //
 
 #include "ipc.h"

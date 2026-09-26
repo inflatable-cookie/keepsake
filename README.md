@@ -114,7 +114,7 @@ Known limitations and support caveats: **[`docs/known-issues-v0.1-alpha.md`](doc
 - **[Config reference](docs/setup/config-reference.md)** — all config.toml options
 - **[Troubleshooting](docs/setup/troubleshooting.md)** — common problems and fixes
 - **[Known issues — v0.1-alpha](docs/known-issues-v0.1-alpha.md)** — current alpha caveats
-- **[Architecture and planning](docs/README.md)** — project docs, decisions, roadmaps
+- **[Project docs and knowledge](docs/README.md)** — architecture, contracts, plan
 
 ---
 
@@ -130,7 +130,7 @@ your VST2 plugins appear in the plugin browser with no additional setup.
 Cookie publishes it under LGPL v2.1. Signal does not ship VST2 support, include
 legacy bridge code, or depend on Keepsake.
 
-If you are a developer of another CLAP host and want to offer tighter Keepsake integration (rescan triggers, legacy badges, scan path configuration), the stable plugin ID namespace is `keepsake.<format>.*` (e.g., `keepsake.vst2.*`, `keepsake.vst3.*`, `keepsake.au.*`). See [`docs/project-brief.md`](docs/project-brief.md) for the integration tier details.
+If you are a developer of another CLAP host and want to offer tighter Keepsake integration (rescan triggers, legacy badges, scan path configuration), the stable plugin ID namespace is `keepsake.<format>.*` (e.g., `keepsake.vst2.*`, `keepsake.vst3.*`, `keepsake.au.*`). See [architecture/system.md](docs/knowledge/architecture/system.md#signal-integration) for the integration tier details.
 
 ---
 

@@ -7,9 +7,8 @@
 // a config.toml override row is matched against.
 //
 // Refs:
-//   docs/contracts/006-process-isolation-policy.md
+//   docs/knowledge/contracts/process-isolation-policy.md
 //   docs/setup/config-reference.md
-//   docs/roadmaps/g03/batch-cards/002-g03-isolation-config-drift-and-override-matching.md
 //
 
 #include "bridge_pool.h"

@@ -10,6 +10,5 @@ minimum_effigy_version = "0.7.0"
 include = [
   "tasks/effigy.tasks.toml",
   "demos/effigy.demos.toml",
-  "docs/effigy.docs.toml",
   "release/effigy.release.toml",
 ]

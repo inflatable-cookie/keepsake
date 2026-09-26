@@ -1,42 +1,13 @@
 # Releases
 
-Release docs define what ships, how it installs, and what support posture the
-published artifacts actually claim.
+Product documentation for published Keepsake versions: what shipped, how it
+installs, and what support posture its artifacts claim. How a release is
+prepared and published is owned by
+[../knowledge/contracts/release.md](../knowledge/contracts/release.md).
 
-## Files
+| Version | Release notes | Support matrix |
+| --- | --- | --- |
+| `v0.1-alpha` | [v0.1-alpha.md](v0.1-alpha.md) | [v0.1-alpha-validation-matrix.md](v0.1-alpha-validation-matrix.md) |
 
-- [`v0.1-alpha.md`](v0.1-alpha.md) — published release notes, artifact plan,
-  and install surface for the first public alpha
-- [`v0.1-alpha-validation-matrix.md`](v0.1-alpha-validation-matrix.md) —
-  release-window support matrix and evidence posture
-- [`v0.1-alpha-publish-checklist.md`](v0.1-alpha-publish-checklist.md) —
-  completed publication gate for the first alpha
-- [`../logs/templates/release-checkpoint-template.md`](../logs/templates/release-checkpoint-template.md) —
-  one dated closeout log template for the actual release cut
-
-## Release Ops
-
-- dry-run package the current alpha candidate locally with:
-  - `effigy release:candidate:alpha`
-- local dry-run output path:
-  - `dist/v0.1-alpha/`
-- build publishable release artifacts in GitHub Actions with:
-  - `.github/workflows/release-binaries.yml`
-- treat CI-built artifacts as the release source of truth
-- leave one dated release checkpoint log when the tag is cut
-- once published, treat the release page plus checkpoint log as the authority
-
-## Rule
-
-Do not publish from chat memory alone. Releases should be backed by:
-
-- the active roadmap lane
-- current known-issues posture
-- current validation evidence
-- current changelog/version surfaces
-- one dated release checkpoint log when the tag is actually cut
-
-## Next Task
-
-Treat the published `v0.1-alpha` release as authority until `v0.2.0` is
-specced in `g02.007+`.
+The current alpha support posture and caveats are in
+[../known-issues-v0.1-alpha.md](../known-issues-v0.1-alpha.md).
