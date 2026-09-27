@@ -17,8 +17,8 @@ defends wider claims.
 - Known issues in the published alpha:
   [known-issues-v0.1-alpha.md](known-issues-v0.1-alpha.md)
 - Repo proof demos: [demos.md](demos.md)
-- Unresolved leads: [triage/](triage/README.md)
+- Unresolved leads: `README.md` (Git history)
 
 ## What's next
 
-See [plan.md](plan.md).
+The project's plan is in Queue: its lanes, their documents and their order.

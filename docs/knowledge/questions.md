@@ -11,7 +11,7 @@ The bridge-owned native editor is the supported macOS interaction model, and
 diagnostic-only. Keeping it costs maintenance and blurs the claim; removing it
 is cleanup work with no release urgency. See
 [architecture/macos-editor.md](architecture/macos-editor.md) and the
-[triage note](../triage/2026-09-09-macos-preview-lane-disposition.md).
+triage note.
 
 ## Q-002 — Is shared-process crash recovery still wanted?
 
@@ -26,11 +26,11 @@ Status: open
 The `v0.2.0` envelope targets Windows x64 and Linux x64 as co-primary
 platforms, but no host set is chosen yet. See
 [architecture/native-vst2-host-capabilities.md](architecture/native-vst2-host-capabilities.md)
-and [plan](../plan.md).
+and plan.
 
 ## Q-004 — Do AU v2 and public 32-bit support land in `v0.2.x` or later?
 
 Status: open
 Both have code and partial evidence, and both sit outside the current
 `v0.2.0` operator scope unless the validation matrix forces a deferral. See
-[plan](../plan.md).
+plan.

@@ -12,8 +12,6 @@ being a CLAP plugin.
 - Knowledge (one owner per fact): `docs/knowledge/README.md`
 - Retired concepts, which must not come back: `docs/knowledge/retired.toml`
 - Open questions: `docs/knowledge/questions.md`
-- What's next: `docs/plan.md`
-- Unresolved leads: `docs/triage/`
 - Install and build guides: `docs/setup/README.md`
 
 Tasks, briefs, status and papercuts live in Queue, never in this repository.
@@ -65,7 +63,7 @@ Prefer `effigy <selector>` over raw tools when it covers the operation. Use
 ## Papercuts
 
 File small, recurring friction in Queue with `papercut.add` (see the
-`northstar` skill). There is no `PAPERCUTS.md`.
+`northstar` skill). The repository holds no papercut file or triage folder.
 
 ## Validate
 

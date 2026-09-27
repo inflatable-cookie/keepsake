@@ -57,7 +57,7 @@ must not bleed into the main plugin process.
 GPLv3 compatibility with the main LGPL v2.1 binary, and the exact public claim
 it permits, must be resolved before VST3 support is claimed. See
 [native-vst2-host-capability-policy.md](native-vst2-host-capability-policy.md)
-and the [plan](../../plan.md) for the current VST3 posture.
+and the plan for the current VST3 posture.
 
 ## AU v2: Apple system framework
 
