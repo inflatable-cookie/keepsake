@@ -31,6 +31,13 @@ Route by job; do not run a startup ritual.
 Prefer `effigy <selector>` over raw tools when it covers the operation. Use
 `--repo <PATH>` only when deliberately targeting another repository.
 
+Use the maintained Effigy Agent Skill from a supported global root
+(`~/.agents/skills/effigy`, `~/.codex/skills/effigy`,
+`~/.claude/skills/effigy` or `~/.cursor/skills/effigy`) for generic routing.
+If it is missing, install Effigy's `skills/effigy` there and start a fresh
+agent context; do not restore `.agents/skills/effigy`. The executable is
+separate: install it using Effigy's README or `effigy bootstrap`.
+
 ## Product rules
 
 - VST2 uses VeSTige only. Never use, reference, vendor or redistribute the
@@ -67,4 +74,6 @@ File small, recurring friction in Queue with `papercut.add` (see the
 
 ## Validate
 
-`effigy qa` before opening a PR.
+Run `qa:docs` once when documentation changes, and use targeted Effigy
+selectors for touched code. The planner runs full `effigy qa` on `main` at
+Queue milestones, not per task.
