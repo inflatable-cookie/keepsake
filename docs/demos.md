@@ -1,20 +1,15 @@
-# Demos
+# Proof tasks
 
-Keepsake now ships a small Effigy demo stack for repo-owned proof.
+Keepsake ships a small set of repo-owned proof tasks for its in-repo VST2
+fixtures and host harnesses. They are plain Effigy tasks, so `effigy tasks`
+lists them and `effigy doctor` resolves them.
 
 List and run them with:
 
 ```sh
-effigy demo list
-effigy demo inspect <demo-id>
-effigy demo run <demo-id>
-effigy demo:supported-proof
-```
-
-If you want the normal supported stack, use:
-
-```sh
-effigy demo:supported-proof
+effigy tasks                 # every task, including the demo:* proof tasks
+effigy demo:<name>           # run one proof task
+effigy demo:supported-proof  # run the normal supported stack
 ```
 
 ## Supported Proof
@@ -22,26 +17,28 @@ effigy demo:supported-proof
 These are the normal repo proof lanes for the tiny in-repo VST2 fixtures and
 host harnesses.
 
-| Demo | What it proves |
+| Task | What it proves |
 |---|---|
-| `vst2-scan-smoke` | scan-path override, VST2 metadata extraction, CLAP factory exposure |
-| `vst2-host-audio-smoke` | instantiate, bridge launch, activation, process loop, audio path |
-| `vst2-host-threaded-smoke` | host main-thread lifecycle calls stay responsive during load/start |
-| `vst2-gui-smoke` | macOS live-window editor open, scripted input path, close, bridge shutdown |
-| `vst2-gui-param-state-smoke` | host-originated CLAP param flush, chunk save/load, state restore |
+| `demo:vst2-scan-smoke` | scan-path override, VST2 metadata extraction, CLAP factory exposure |
+| `demo:vst2-host-audio-smoke` | instantiate, bridge launch, activation, process loop, audio path |
+| `demo:vst2-host-threaded-smoke` | host main-thread lifecycle calls stay responsive during load/start |
+| `demo:vst2-gui-smoke` | macOS live-window editor open, scripted input path, close, bridge shutdown |
+| `demo:vst2-gui-param-state-smoke` | host-originated CLAP param flush, chunk save/load, state restore |
 
 ## Diagnostic Proof
 
 This lane is intentionally not part of the supported normal posture.
 
-| Demo | What it proves | Why it is diagnostic-only |
+| Task | What it proves | Why it is diagnostic-only |
 |---|---|---|
-| `vst2-gui-preview-ui-state-smoke` | preview-path scripted UI click changes editor state and chunk contents | macOS preview / IOSurface is a diagnostic lane, not the supported interaction posture |
+| `demo:vst2-gui-preview-ui-state-smoke` | preview-path scripted UI click changes editor state and chunk contents | macOS preview / IOSurface is a diagnostic lane, not the supported interaction posture |
 
 ## Current Reading
 
-- Treat `vst2-gui-smoke` as the supported macOS GUI proof.
-- Treat `vst2-gui-preview-ui-state-smoke` as a narrow operator/debug proof for
-  preview-path investigation.
-- Do not treat the repo fixture demos as a substitute for real-host REAPER
+- Treat `demo:vst2-gui-smoke` as the supported macOS GUI proof.
+- Treat `demo:vst2-gui-preview-ui-state-smoke` as a narrow operator/debug proof
+  for preview-path investigation.
+- Do not treat the repo fixture proofs as a substitute for real-host REAPER
   validation on the published lane.
+- The task comments in `demos/effigy.demos.toml` carry each task's proof
+  statement and the artifact paths its tools write.

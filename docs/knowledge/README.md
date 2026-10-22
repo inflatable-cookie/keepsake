@@ -28,4 +28,4 @@ Product documentation for users and consumers lives outside `docs/knowledge/`:
 | Install and build guides | [../setup/](../setup/README.md) |
 | Release notes and support matrix for published versions | [../releases/](../releases/README.md) |
 | Known issues in the published alpha | [../known-issues-v0.1-alpha.md](../known-issues-v0.1-alpha.md) |
-| Repo proof demos | [../demos.md](../demos.md) |
+| Repo proof tasks | [../demos.md](../demos.md) |
