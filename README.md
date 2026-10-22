@@ -152,9 +152,8 @@ Other useful commands:
 
 ```sh
 effigy doctor          # health check — verify build environment
-effigy demo list       # list available demo proofs
 effigy demo:supported-proof  # run the primary validation suite
-effigy demo run <id>   # run a specific demo
+effigy demo:<name>     # run one proof task (see docs/demos.md)
 ```
 
 The project uses [VeSTige](https://github.com/LMMS/lmms/blob/master/plugins/vst_base/vestige/aeffect.h) (bundled in `vendor/`) for VST2 — not the Steinberg SDK. The [CLAP SDK](https://github.com/free-audio/clap) and VST3 pluginterfaces are fetched via CMake FetchContent. Full build instructions for all three platforms, including 32-bit bridge builds and troubleshooting: **[docs/setup/building.md](docs/setup/building.md)**

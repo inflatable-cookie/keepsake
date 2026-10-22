@@ -55,17 +55,16 @@ If `effigy doctor` reports problems, fix those before doing anything else. Exter
 The core loop:
 
 ```sh
-effigy tasks          # see what's available
-effigy doctor         # health check
-effigy qa             # build + test + validate
+effigy tasks                    # see what's available
+effigy doctor                   # health check
+effigy qa                       # build + test + validate
 ```
 
 For validating real-plugin behaviour:
 
 ```sh
-effigy demo list                # list demos
 effigy demo:supported-proof     # run the primary validation suite (macOS + REAPER + VST2)
-effigy demo run <demo-id>       # run a specific demo
+effigy demo:<name>              # run one proof task (see docs/demos.md)
 ```
 
 Prefer `effigy <task>` over raw CMake or shell commands when there's a task that covers the operation. When there isn't one, raw tools are fine.
@@ -101,7 +100,7 @@ Before opening a PR:
 
 1. **`effigy qa` passes** — this is the minimum bar
 2. **Test on the primary lane** if at all possible: macOS + REAPER + VST2. If you don't have access to macOS, say so in the PR and describe how you validated on your platform.
-3. **Run a demo proof** if your change touches scanning, loading, or audio: `effigy demo:supported-proof`
+3. **Run a proof task** if your change touches scanning, loading, or audio: `effigy demo:supported-proof`
 4. **For GUI changes on macOS:** test with at least one real plugin (Serum, APC, or a plugin with a complex editor)
 
 If you're adding a new capability or fixing a crash, describe what you tested and what you observed — not just that tests pass.

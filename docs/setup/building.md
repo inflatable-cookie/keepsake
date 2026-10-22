@@ -256,9 +256,8 @@ Once built, use Effigy for validation rather than running tools manually:
 ```sh
 effigy doctor                   # verify the build environment is healthy
 effigy qa                       # full quality check
-effigy demo list                # list available demo proofs
 effigy demo:supported-proof     # run the primary validation suite (macOS + REAPER + VST2)
-effigy demo run <id>            # run a specific demo
+effigy demo:<name>              # run one proof task (see docs/demos.md)
 ```
 
 The `doctor` task catches common configuration problems (missing bridge binary, wrong output paths, etc.) and is worth running after any significant build change.

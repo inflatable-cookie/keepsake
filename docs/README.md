@@ -16,7 +16,7 @@ defends wider claims.
 - Published release notes and support matrix: [releases/](releases/README.md)
 - Known issues in the published alpha:
   [known-issues-v0.1-alpha.md](known-issues-v0.1-alpha.md)
-- Repo proof demos: [demos.md](demos.md)
+- Repo proof tasks: [demos.md](demos.md)
 - Unresolved leads: `README.md` (Git history)
 
 ## What's next

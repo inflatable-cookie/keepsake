@@ -10,11 +10,11 @@
   { run = "./tools/demo-capture.sh .effigy/demo/artifacts/shared/vst2-gui-stack-build.log cmake --build build --target keepsake keepsake-bridge keepsake-bridge-x86_64 mac-clap-host demo-vst2-gui-plugin" },
 ]
 "demo:supported-proof" = [
-  { run = "effigy demo run vst2-scan-smoke" },
-  { run = "effigy demo run vst2-host-audio-smoke" },
-  { run = "effigy demo run vst2-host-threaded-smoke" },
-  { run = "effigy demo run vst2-gui-smoke" },
-  { run = "effigy demo run vst2-gui-param-state-smoke" },
+  { task = "demo:vst2-scan-smoke" },
+  { task = "demo:vst2-host-audio-smoke" },
+  { task = "demo:vst2-host-threaded-smoke" },
+  { task = "demo:vst2-gui-smoke" },
+  { task = "demo:vst2-gui-param-state-smoke" },
 ]
 "qa:docs:links" = "effigy docs check links"
 "qa:docs:agent-defaults" = "effigy docs check forbidden README.md docs/README.md --forbid '--repo .'"
