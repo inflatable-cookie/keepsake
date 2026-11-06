@@ -70,7 +70,7 @@ separate: install it using Effigy's README or `effigy bootstrap`.
 ## Papercuts
 
 File small, recurring friction in Queue with `papercut.add` (see the
-`northstar` skill). The repository holds no papercut file or triage folder.
+Nucleus skill). The repository holds no papercut file or triage folder.
 
 ## Validate
 
