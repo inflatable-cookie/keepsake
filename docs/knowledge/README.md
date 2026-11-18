@@ -18,7 +18,6 @@ Every topic has exactly one owning file. Link to it; don't restate it.
 | Native VST2 host capability policy | [contracts/native-vst2-host-capability-policy.md](contracts/native-vst2-host-capability-policy.md) |
 | How we release | [contracts/release.md](contracts/release.md) |
 | Internal writing style | [contracts/writing-style.md](contracts/writing-style.md) |
-| Retired concepts | [retired.toml](retired.toml) |
 | Open questions | [questions.md](questions.md) |
 
 Product documentation for users and consumers lives outside `docs/knowledge/`:

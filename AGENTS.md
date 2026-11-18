@@ -10,7 +10,6 @@ being a CLAP plugin.
 
 - Current state: `docs/README.md`
 - Knowledge (one owner per fact): `docs/knowledge/README.md`
-- Retired concepts, which must not come back: `docs/knowledge/retired.toml`
 - Open questions: `docs/knowledge/questions.md`
 - Install and build guides: `docs/setup/README.md`
 
