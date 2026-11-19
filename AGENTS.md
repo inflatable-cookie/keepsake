@@ -13,7 +13,7 @@ being a CLAP plugin.
 - Open questions: `docs/knowledge/questions.md`
 - Install and build guides: `docs/setup/README.md`
 
-Tasks, briefs, status and papercuts live in Queue, never in this repository.
+Tasks, briefs, status and papercuts live in Nucleus, never in this repository.
 
 ## Commands
 
@@ -68,11 +68,11 @@ separate: install it using Effigy's README or `effigy bootstrap`.
 
 ## Papercuts
 
-File small, recurring friction in Queue with `papercut.add` (see the
+File small, recurring friction in Nucleus with `papercut.add` (see the
 Nucleus skill). The repository holds no papercut file or triage folder.
 
 ## Validate
 
 Run `qa:docs` once when documentation changes, and use targeted Effigy
 selectors for touched code. The planner runs full `effigy qa` on `main` at
-Queue milestones, not per task.
+Nucleus milestones, not per task.
